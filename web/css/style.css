@@ -340,7 +340,6 @@ i.fa.fa-graduation-cap {
 .callbacks_nav:active {
   opacity: 1.0;
 }
-
 #slider3-pager a,#slider4-pager a ,#slider5-pager a  {
   display: inline-block;
 }
@@ -386,7 +385,6 @@ i.fa.fa-graduation-cap {
   position: relative;
   display: block;
 }
-
 .callbacks_tabs {
     list-style: none;
     position: absolute;
@@ -3672,15 +3670,4 @@ body {
 		}
 	}
 
-	input[type="text"] {
-	  margin-bottom: -1px;
-	  border-bottom-left-radius: 0;
-	  border-bottom-right-radius: 0;
-	}
-
-	input[type="password"] {
-	  margin-bottom: 20px;
-	  border-top-left-radius: 0;
-	  border-top-right-radius: 0;
-	}
-}
+	

@@ -9,7 +9,6 @@ require 'get_field.php';
 if(isset($_SESSION['EmpID'])&&!empty($_SESSION['EmpID']))
 {
 $result=getuserfield('Email');
-echo 'Welcome , '.$result;
 }
 ?>
 
@@ -59,7 +58,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="contact-bnr-w3-agile">
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-									<li style="padding-left:800px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+                  <?php
+                  if(loggedin()){
+                    echo '<li style="padding-left:400px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+                    echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+
+                  }
+                  else{
+                      echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+                      header('Location:login.php');
+                  }
+                   ?>
+									<!-- <li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li> -->
 								</ul>
 							</div>
 
@@ -67,8 +77,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html" class="active">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="index.php" class="active">Home</a></li>
+							<li><a href="about.php">About</a></li>
 							<li><a href="services.html">Services</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
@@ -93,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <?php
       if(isset($_SESSION['EmpID'])&&!empty($_SESSION['EmpID']))
       {
-      $result=getuserfield('Email');
+      $result=getuserfield('First');
       echo '<h2>Welcome , '.$result."</h2>";
       }
        ?>

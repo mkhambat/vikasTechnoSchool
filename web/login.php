@@ -8,6 +8,7 @@ if(loggedin()){
 header('Location:trial.php');
 }
 
+
 if (isset($_POST['username'])&&isset($_POST['password']))
 {
   if(!empty($_POST['username'])&&!empty($_POST['password']))
@@ -16,7 +17,6 @@ if (isset($_POST['username'])&&isset($_POST['password']))
   $password=$_POST['password'];
   $password_hash=md5($password);
   $query= "SELECT `EmpID` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
-	echo $query;
 
   }
 }
@@ -69,7 +69,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="contact-bnr-w3-agile">
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-									<li style="padding-left:800px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+									<?php
+									 ?>
+									<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
 								</ul>
 							</div>
 
@@ -77,8 +79,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html" class="active">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="index.php" class="active">Home</a></li>
+							<li><a href="about.php">About</a></li>
 							<li><a href="services.html">Services</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
@@ -99,38 +101,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="container" style="padding-top:80px">
     <div class-"row">
-      <div class="col-md-6" style="color:#f3e1e1; float : none; margin:0 auto; width:40%">
-        <h2 class="form-signin-heading" style="margin:auto">Please login</h2>
-				<div class="invalid">
-					<?php
-  						if (isset($_POST['username'])&&isset($_POST['password'])&&isset($query))
-  						{
-  							if($query_run=mysqli_query($con,$query))
-  							{
-   								$query_num_rows=mysqli_num_rows($query_run);
-   								if($query_num_rows==0)
-   								{
-    								echo "Username/Password Invalid . Try Again.";
-   								}
-   								else
-   								{
-    								#$user_id=mysqli_result($query_run,0,'EmpID');
-										$row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
-    								$_SESSION['EmpID']=$row['EmpID'];
-    								header('Location:trial.php');
-   								}
-  							}
-							}
-					?>
-					</div>
-          <form class="form-signin" style="padding-top:20px" action="login.php" method="POST">
+      <div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+        <h2 class="form-signin-heading" align="center">Login here!</h2>
 
+          <form class="form-signin" style="padding-top:20px;margin-top:20px;" action="login.php" method="POST">
+            <div class="input-group" style="width:100%">
             <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+					</div>
+					<div class="input-group" style="width:100%">
             <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+					</div>
             <button class="btn btn-md btn-primary btn-block" type="submit">Login</button>
-            <div style="font-size:16px; padding-left:100px; margin-top:15px">
+            <div style="font-size:16px; margin-top:15px" align="center">
             <a href="registeration.html">Register</a> - <a href="#">Forgot Password</a>
           </div>
+					<div class="invalid" style="padding-top:10px">
+						<?php
+								if (isset($_POST['username'])&&isset($_POST['password'])&&isset($query))
+								{
+									if($query_run=mysqli_query($con,$query))
+									{
+										$query_num_rows=mysqli_num_rows($query_run);
+										if($query_num_rows==0)
+										{
+											echo "<h4>Username/Password Invalid . Try Again.</h4>";
+										}
+										else
+										{
+											#$user_id=mysqli_result($query_run,0,'EmpID');
+											$row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+											$_SESSION['EmpID']=$row['EmpID'];
+											if(isset($_SESSION['url'])) {
+												$url = $_SESSION['url'];
+												echo $url;
+											}
+
+											else{
+												$url = "trial.php";
+											}
+											header('Location:'.$url);
+										}
+									}
+								}
+						?>
+						</div>
           </form>
   </div>
 	</div>
