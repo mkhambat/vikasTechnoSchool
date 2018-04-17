@@ -5,7 +5,7 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Emphasize an Education Category Bootstrap Responsive Web Template | About :: w3layouts</title>
+<title>VTS - About</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,13 +38,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<span class="icon-bar"></span>
 								</button>
 								<h1>
-									<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Emphasize</a>
+									<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 								</h1>
 					</div>
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
 						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 							<?php
 
 							if(loggedin()){
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php" class="active">About</a></li>
-							<li><a href="services.html">Services</a></li>
+							<li><a href="services.html">Admissions</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
@@ -86,10 +86,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- about inner -->
 <div class="about-bottom inner-padding">
 	<div class="container">
-	<h3 class="heading-agileinfo">About Us<span>Experience a good Education</span></h3>
+	<h3 class="heading-agileinfo">About Us<span>Redefining School</span></h3>
 				<div class="about-bott-right">
 					 <h5>Who We Are</h5>
-					 <p>Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure reprehend.Unicmquam eius, Basmodi temurer sehsMunim.Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure reprehend.</p>
+					 <p>We are a Private school located in Andra Pradesh, the southern state of India. Currently, home to over 2000 students, we provides quality education and all-round development of students between the age of 5-18 years. Since our establishment in 2011, we have been the only major private sector school in the area. Employing 120 staffs and teachers, we has been a spearhead in providing quality education to students in Vissannapeta, Andra Pradesh. </p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="about-agile inner-padding">
 	<div class="container">
 		<h3 class="heading-agileinfo white-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
-		<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia .</p>
+		<p>“Ideas shape the course of history as the pen is mightier than the sword.”</p>
 			<div class="more-button">
 				<a href="contact.html">Mail Us</a>
 			</div>
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Team -->
 <div class="team" id="team">
 		<div class="container">
-		<h3 class="heading-agileinfo">Meet Our Staff<span>Quis autem vel eum iure reprehenderit</span></h3>
+		<h3 class="heading-agileinfo">Meet Our Staff<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
 			<div class="agile_team_grids">
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
@@ -192,11 +192,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="contact-top-w3-agile">
 </div>
 	<div class="container">
-		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our Emphasize. We are glad to have you around.</span></h2>
+		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Melbourne St, QLD 4101, Australia.</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+1234 567 567<br>+1567 567 234</span></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:info@example.com">info@example1.com</a><br><a href="mailto:info@example.com">info@example2.com</a></span></li>
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:vtsiit2011@gmail.com">info@example2.com</a></span></li> -->
 			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
 		</ul>
 		<div class="clearfix"> </div>
@@ -204,17 +204,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul class="banner-menu-w3layouts">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
+					<li><a href="services.html">Admissions</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
-				<ul class="agileits_social_list">
+				<!-- <ul class="agileits_social_list">
 					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-				</ul>
-				<p>© 2017 Emphasize . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+				</ul> -->
+				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 		</div>
 	</div>
 </div>

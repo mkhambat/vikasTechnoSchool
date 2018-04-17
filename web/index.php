@@ -6,7 +6,7 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>VTS</title>
+<title>VTS - Home</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
 						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 							<?php
 
 							if(loggedin()){
@@ -65,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="services.html">Services</a></li>
+							<li><a href="services.html">Admissions</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
@@ -90,9 +90,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="banner-text">
 							<h3>The best place for </h3>
 							<h4>education</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem ab illo.</p>
+							<p>“Ideas shape the course of history as the pen is mightier than the sword.”</p>
 							<div class="more-button">
-			<a href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+			<a href="about.php">Read More</a>
 		</div>
 						</div>
 					</li>
@@ -100,19 +100,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="banner-text">
 							<h3>Better education for a</h3>
 							<h4>Better world</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem ab illo.</p>
+							<p>Redefining School</p>
 							<div class="more-button">
-			<a href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+			<a href="about.php" >Read More</a>
 		</div>
 						</div>
 					</li>
-					<li>
+					<!-- <li>
 						<div class="banner-text">
 							<h3>Tips to succeed in</h3>
 							<h4>education</h4>
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem ab illo.</p>
 							<div class="more-button">
-			<a href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+			<a href="about.php">Read More</a>
 		</div>
 						</div>
 					</li>
@@ -123,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem ab illo.</p>
 							<div class="more-button">
 			<a href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
-		</div>
+		</div> -->
 						</div>
 					</li>
 				</ul>
@@ -134,10 +134,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //Header -->
 <!-- Modal1 -->
-						<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-							<div class="modal-dialog">
+				<!-- 		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+							<div class="modal-dialog"> -->
 							<!-- Modal content-->
-								<div class="modal-content">
+								<!-- <div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>Vikas Techno School</h4>
@@ -147,14 +147,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 <!-- //Modal1 -->
 <!-- Events-Modal-Popup-->
 <!-- Modal2 -->
-						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-							<div class="modal-dialog">
+				<!-- 		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+							<div class="modal-dialog"> -->
 							<!-- Modal content-->
-								<div class="modal-content">
+								<!-- <div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>Vikas Techno School</h4>
@@ -170,13 +170,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 <!-- //Modal2 -->
 <!-- Modal3 -->
-						<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
-							<div class="modal-dialog">
+				<!-- 		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+							<div class="modal-dialog"> -->
 							<!-- Modal content-->
-								<div class="modal-content">
+					<!-- 			<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>Emphasize</h4>
@@ -192,13 +192,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 <!-- //Modal3 -->
 <!-- Modal4 -->
-						<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
-							<div class="modal-dialog">
+				<!-- 		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+							<div class="modal-dialog"> -->
 							<!-- Modal content-->
-								<div class="modal-content">
+								<!-- <div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>Emphasize</h4>
@@ -214,13 +214,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 <!-- //Modal4 -->
 <!-- Modal5 -->
-						<div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
-							<div class="modal-dialog">
+				<!-- 		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
+							<div class="modal-dialog"> -->
 							<!-- Modal content-->
-								<div class="modal-content">
+								<!-- <div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>Emphasize</h4>
@@ -236,17 +236,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 <!-- //Modal5 -->
 <!-- //Events-Modal-Popup-->
 <!-- about-agileits -->
 <div class="about-agileits">
 		<div class="container">
-		<h3 class="heading-agileinfo">About Us<span>Experience a good Education</span></h3>
+		<h3 class="heading-agileinfo">About Us<span>Redefining School</span></h3>
 			<div class="agileits_banner_bottom">
-				<p>Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure reprehend.Unicmquam eius, Basmodi temurer sehsMunim.Masagni dolores eoquie int Basmodi temporant, ut laboreas dolore magnam aliquam kuytase uaeraquis autem vel eum iure reprehend.</p>
+				<p>We are a Private school located in Andra Pradesh, the southern state of India. Currently, home to over 2000 students, we provides quality education and all-round development of students between the age of 5-18 years. Since our establishment in 2011, we have been the only major private sector school in the area. Employing 120 staffs and teachers, we has been a spearhead in providing quality education to students in Vissannapeta, Andra Pradesh. </p>
 			</div>
-			<div class="w3ls_banner_bottom_grids">
+			<!-- <div class="w3ls_banner_bottom_grids">
 				<ul class="cbp-ig-grid">
 					<li>
 						<div class="w3_grid_effect">
@@ -277,48 +277,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</div>
 <!-- about-agileits -->
 <!-- Stats -->
 	<div class="stats-agileits" id="stats">
 	<div class="container">
-		<h3 class="heading-agileinfo white-w3ls">We Have Something To Be Proud Of<span class="black-w3ls">Sed lectus tellus , feugiat porttitor nulla.</span></h3>
+		<h3 class="heading-agileinfo white-w3ls">We Have Something To Be Proud Of<!-- <span class="black-w3ls">Sed lectus tellus , feugiat porttitor nulla.</span> --></h3>
 	</div>
 		<div class="stats-info agileits w3layouts">
 		<div class="container">
 			<div class="col-md-3 agileits w3layouts col-sm-6 stats-grid stats-grid-1">
-				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='2500' data-delay='3' data-increment="2">2500</div>
+				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='2000' data-delay='3' data-increment="2">2000</div>
 				<div class="stat-info-w3ls">
-					<h4 class="agileits w3layouts">Foreign Followers</h4>
+					<h4 class="agileits w3layouts">Students enrolled</h4>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-3 agileits w3layouts stats-grid stats-grid-2">
-				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='150' data-delay='3' data-increment="2">150</div>
+				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='120' data-delay='11' data-increment="2">120</div>
 				<div class="stat-info-w3ls">
-					<h4 class="agileits w3layouts">Certified Teachers</h4>
+					<h4 class="agileits w3layouts">Motivated Teachers</h4>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-3 stats-grid agileits w3layouts stats-grid-3">
-				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='3421' data-delay='3' data-increment="2">3421</div>
+				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='50' data-delay='11' data-increment="2">50</div>
 				<div class="stat-info-w3ls">
-					<h4 class="agileits w3layouts">Students Enrolled</h4>
+					<h4 class="agileits w3layouts">Percentage of students graduating with 9+ GPA</h4>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-3 stats-grid stats-grid-4 agileits w3layouts">
+			<!-- <div class="col-md-3 col-sm-3 stats-grid stats-grid-4 agileits w3layouts">
 				<div class="numscroller agileits-w3layouts" data-slno='1' data-min='0' data-max='210' data-delay='3' data-increment="2">210</div>
 				<div class="stat-info-w3ls">
 					<h4 class="agileits w3layouts">Complete Courses</h4>
 				</div>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
 	<!-- //Stats -->
 <!--Events -->
-		<div class="events-agileits-w3layouts">
+		<!-- <div class="events-agileits-w3layouts">
 		<h3 class="heading-agileinfo">Upcoming Events<span>Upcoming Education Events to feed your brain.</span></h3>
 
 				<div class="popular-grids">
@@ -376,12 +376,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="clearfix"></div>
 				</div>
-		</div>
+		</div> -->
 <!-- //Events -->
 <!--testimonials-->
 <div id="testimonials" class="testimonials">
 	<div class="container">
-		<h3 class="heading-agileinfo">Our Parents Says<span>Sed lectus tellus , feugiat porttitor nulla.</span></h3>
+		<h3 class="heading-agileinfo">Our Parents Says<!-- <span>Sed lectus tellus , feugiat porttitor nulla.</span> --></h3>
 		<div class="flex-slider">
 			<ul id="flexiselDemo1">
 				<li>
@@ -429,11 +429,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="contact-top-w3-agile">
 </div>
 	<div class="container">
-		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our Emphasize. We are glad to have you around.</span></h2>
+		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Melbourne St, QLD 4101, Australia.</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+1234 567 567<br>+1567 567 234</span></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:info@example.com">info@example1.com</a><br><a href="mailto:info@example.com">info@example2.com</a></span></li>
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
 			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
 		</ul>
 			<div class="clearfix"></div>
@@ -441,17 +441,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul class="banner-menu-w3layouts">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
+					<li><a href="services.html">Admissions</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
-				<ul class="agileits_social_list">
+				<!-- <ul class="agileits_social_list">
 					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-				</ul>
-				<p>© 2017 Emphasize . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+				</ul> -->
+				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 		</div>
 	</div>
 </div>
@@ -479,7 +479,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										$('.events').append("<li>after event fired.</li>");
 										}
 										});
-										});
+										})
 			</script>
 <!-- <!- //responsiveslides -->
 <!-- OnScroll-Number-Increase-JavaScript -->
