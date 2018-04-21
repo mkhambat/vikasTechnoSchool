@@ -116,7 +116,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="w3layouts_port_head">
 										<h3>Emphasize</h3>
 									</div>
-									<img src="<?php echo $image?>" alt="Fjords" class="img-responsive" style="width: 100%">
+									<img src="<?php echo $image?>" alt="Fjords"  height="450!important" width="450">
 								</div>
 							</a>
 

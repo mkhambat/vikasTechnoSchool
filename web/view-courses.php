@@ -4,7 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
 
+				require 'connect.inc.php';
+?>
 
 
 <!DOCTYPE html>
@@ -99,70 +102,22 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		
 
 		<div class="container">
-			<h3 class="heading-agileinfo">Upload photos to gallery</h3>
+			<h3 class="heading-agileinfo">Courses</h3>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
 					<input type="file" name="fileToUpload" id="fileToUpload">
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
-				<form action="upload.php" method="post" enctype="multipart/form-data">
-					<table align="center">
-						<tr>
-							<td><!-- <input type="file" name="files[]" multiple/> --><input type="file" name="fileToUpload" id="fileToUpload"></td>
-						</tr>
-						<tr>
-							<td  ><input type="submit" value="Upload Image" name="submit" id="submit"/></td>
-						</tr>
-					</table>
-				</form>
-
 				<?php
+				
+				$query = mysqli_query($con,"SELECT * FROM courses");
+				while ( $row = mysqli_fetch_array($query)) {
+				echo '<a href="'.$row['file_path'].'">'.$row['course_name'].'</a>'	;			
+				}
 
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-	$target_dir = "images/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-	$uploadOk = 1;
-	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-	if($check !== false) {
-		echo "File is an image - " . $check["mime"] . ".";
-		$uploadOk = 1;
-	} else {
-		echo "File is not an image.";
-		$uploadOk = 0;
-	}
-
-// Check if file already exists
-	if (file_exists($target_file)) {
-		echo "Sorry, file already exists.";
-		$uploadOk = 0;
-	}
-// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 5000000) {
-		echo "Sorry, your file is too large.";
-		$uploadOk = 0;
-	}
-// Allow certain file formats
-	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-		&& $imageFileType != "gif" ) {
-		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-	$uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-	echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	} else {
-		echo "Sorry, there was an error uploading your file.";
-	}
-}
-}
-?>
+					
+			?>
 
 
 
