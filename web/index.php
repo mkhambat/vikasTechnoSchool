@@ -62,10 +62,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav ">
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="services.html">Admissions</a></li>
+							<li><a href="events.html">Events</a></li>
+
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
@@ -379,9 +381,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div> -->
 <!-- //Events -->
 <!--testimonials-->
-<div id="testimonials" class="testimonials">
+<!-- <div id="testimonials" class="testimonials">
 	<div class="container">
-		<h3 class="heading-agileinfo">Our Parents Says<!-- <span>Sed lectus tellus , feugiat porttitor nulla.</span> --></h3>
+		<h3 class="heading-agileinfo">Our Parents Says <span>Sed lectus tellus , feugiat porttitor nulla.</span></h3>
 		<div class="flex-slider">
 			<ul id="flexiselDemo1">
 				<li>
@@ -422,7 +424,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	</div>
 </div>
-<!--//testimonials-->
+ --><!--//testimonials-->
 <!-- footer -->
 
 <div class="contact-w3ls ">
@@ -439,9 +441,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 		<div class="copy">
 				<ul class="banner-menu-w3layouts">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="services.html">Admissions</a></li>
+					<li><a href="events.html">Events</a></li>
+
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>

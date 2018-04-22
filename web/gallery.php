@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Emphasize an Education Category Bootstrap Responsive Web Template | Gallery :: w3layouts</title>
+	<title>VTS - Gallery</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -43,23 +43,23 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<span class="icon-bar"></span>
 						</button>
 						<h1>
-							<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Emphasize</a>
+							<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 						</h1>
 					</div>
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
 						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	
+							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+							<!-- <li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	 -->
 						</ul>
 					</div>
 				</div>
 				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="about.php">About</a></li>
+						<li><a href="admissions.html">Admissions</a></li>
 						<!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
@@ -89,7 +89,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="inner-padding">
 
 		<div class="container">
-			<h3 class="heading-agileinfo">Our gallery<span>Lorem ipsum dolor sit amet elit.</span></h3>
+			<h3 class="heading-agileinfo">Our gallery<!-- <span>Lorem ipsum dolor sit amet elit.</span> --></h3>
 			<div class="w3ls_portfolio_grids">
 				
 
@@ -111,12 +111,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 						<div class="column" style="width: 33.33%;float: left; width: 33.33%; padding: 5px;">
 						   
-							<a href="<?php echo $image?>" class="showcase" data-rel="lightcase:myCollection:slideshow" title="Emphasize">
+							<a href="<?php echo $image?>" class="showcase" data-rel="lightcase:myCollection:slideshow" title="VTS">
 								<div class="agileits_portfolio_sub_grid agileits_w3layouts_team_grid">	
 									<div class="w3layouts_port_head">
-										<h3>Emphasize</h3>
+										<h3>VTS</h3>
 									</div>
-									<img src="<?php echo $image?>" alt="Fjords"  height="450!important" width="450">
+									<img src="<?php echo $image?>" alt="Fjords"  height="300!important" width="450">
 								</div>
 							</a>
 
@@ -149,29 +149,29 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="contact-top-w3-agile">
 	</div>
 	<div class="container">
-		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our Emphasize. We are glad to have you around.</span></h2>
+		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Melbourne St, QLD 4101, Australia.</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+1234 567 567<br>+1567 567 234</span></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:info@example.com">info@example1.com</a><br><a href="mailto:info@example.com">info@example2.com</a></span></li>
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India.</span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span> --></li>
 			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
 		</ul>
 		<div class="clearfix"></div>
 		<div class="copy">
 			<ul class="banner-menu-w3layouts">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="about.php">About</a></li>
+				<li><a href="admissions.html">Services</a></li>
+				<li><a href="gallery.php">Gallery</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
-			<ul class="agileits_social_list">
+			<!-- <ul class="agileits_social_list">
 				<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 				<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 				<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 				<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-			</ul>
-			<p>© 2017 Emphasize . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+			</ul> -->
+			<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 		</div>
 	</div>
 </div>
