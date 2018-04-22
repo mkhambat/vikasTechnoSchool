@@ -1,14 +1,10 @@
 <?php
-
 require 'connect.inc.php';
 require 'session.php';
 require 'check_login.php';
-
 if(loggedin()){
-header('Location:trial.php');
+header('Location:index.php');
 }
-
-
 if (isset($_POST['username'])&&isset($_POST['password']))
 {
   if(!empty($_POST['username'])&&!empty($_POST['password']))
@@ -16,11 +12,10 @@ if (isset($_POST['username'])&&isset($_POST['password']))
   $name=$_POST['username'];
   $password=$_POST['password'];
   $password_hash=md5($password);
-  $query= "SELECT `EmpID` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
-
+  $query= "SELECT `EmpID`, `Admin_Status`,`Approved_status` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
+  #echo $query;
   }
 }
-
  ?>
 
 <!DOCTYPE html>
@@ -130,17 +125,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										{
 											#$user_id=mysqli_result($query_run,0,'EmpID');
 											$row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
-											$_SESSION['EmpID']=$row['EmpID'];
-											if(isset($_SESSION['url'])) {
-												$url = $_SESSION['url'];
-												echo $url;
-											}
+                      if($row['Approved_status'] !='Yes' ) {
+                        echo "<h4>Admin approval pending. Try Again Later.</h4>";
+                      }
+                    else{
 
-											else{
-												$url = "trial.php";
+
+											$_SESSION['EmpID']=$row['EmpID'];
+                      // echo $row['EmpID'];
+                      $_SESSION['Admin_Status']=$row['Admin_Status'];
+                      #echo $row['Admin_Status'];
+											if(isset($_SESSION['url']) && empty($row['Admin_Status']) ) {
+												$url = $_SESSION['url'];
+												#echo "fuvk";
 											}
+											elseif ($row['Admin_Status']=="Yes") {
+                          #echo 'yes';
+                        	$url = "admin.php";
+                      }
+                      else{
+                        $url = "index.php";
+
+                      }
+                      #echo $url;
 											header('Location:'.$url);
 										}
+                  }
 									}
 								}
 						?>
