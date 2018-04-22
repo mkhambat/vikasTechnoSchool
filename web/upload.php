@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -25,7 +25,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/lightcase.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts--><!-- 
+<!--fonts--><!--
 <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
@@ -51,16 +51,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<div class="contact-bnr-w3-agile">
 						<ul>
 							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	
+							<!-- <li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	 -->
 						</ul>
 					</div>
 				</div>
 				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="about.php">About</a></li>
+						<li><a href="admission.php">Services</a></li>
 						<!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
@@ -76,27 +76,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<li><a href="icons.html">Icons</a></li>
 							</ul>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="codes.html">Short Codes</a></li>
-								<li><a href="icons.html">Icons</a></li>
-							</ul>
-						</li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 
 				</div>
-				<div class="clearfix"> </div>	
+				<div class="clearfix"> </div>
 			</nav>
 			<div class="clearfix"> </div>
 		</div>
-	</div>	
+	</div>
 	<!-- //Header -->
 	<!-- gallery inner -->
 	<div class="inner-padding">
 
-		
+
 
 		<div class="container">
 			<h3 class="heading-agileinfo">Upload photos to gallery</h3>
@@ -221,7 +214,7 @@ if ($uploadOk == 0) {
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -236,9 +229,9 @@ if ($uploadOk == 0) {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-			*/								
+			*/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
@@ -247,4 +240,3 @@ if ($uploadOk == 0) {
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>
-

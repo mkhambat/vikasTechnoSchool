@@ -48,12 +48,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<?php
 
 							if(loggedin()){
-								echo '<li style="padding-left:400px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
 								echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
 
 							}
 							else{
-									echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+									echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 								}
 							?>
 						</ul>
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="about.php" class="active">About</a></li>
 							<li><a href="services.html">Admissions</a></li>
 							<li><a href="events.html">Events</a></li>
-						
+
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="mask">
 							<h5>Science Lab</h5>
 							<!-- <p></p> -->
-							
+
 						</div>
 					</div>
 					<h4>Science Lab</h4>
@@ -123,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="mask">
 							<h5>Play room for pre-primary school</h5>
 							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-							
+
 						</div>
 					</div>
 					<h4>Play room for pre-primary school</h4>

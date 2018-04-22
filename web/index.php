@@ -49,12 +49,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<?php
 
 							if(loggedin()){
-								echo '<li style="padding-left:400px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
 								echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
 
 							}
 							else{
-									echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+									echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 								}
 							?>
 						</ul>
@@ -65,18 +65,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav ">
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="services.html">Admissions</a></li>
+							<li><a href="admissions.html">Admissions</a></li>
 							<li><a href="events.html">Events</a></li>
 
-							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="codes.html">Short Codes</a></li>
-									<li><a href="icons.html">Icons</a></li>
+
+									<li><a href="gallery.php">View Gallery</a></li>
+									<?php
+									if(loggedin()) {
+
+
+									echo'<li><a href="upload.php">Upload photos</a></li>';
+								}
+									?>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="view-courses.php">View Courses</a></li>
+									<?php
+									if(loggedin()) {
+									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+								}
+								?>
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
+							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+								echo'<li><a href="admin.php">Admin Panel</a></li>';
+
+							}
+							 ?>
 						</ul>
 
 					</div>

@@ -1,11 +1,16 @@
 
 <?php
 require 'essentials.php';
-if(isset($_POST['ids'])){
-	print_r($_POST['ids']);
-	echo 'yes';
+if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']!='Yes' ){
+	header('Location: index.php');
+
 }
-$query="SELECT `EmpID`,`Email` FROM `registeration` LIMIT 0, 30 ";
+else{
+	$query="SELECT `EmpID`,`Email` FROM `registeration` LIMIT 0, 30 ";
+
+}
+
+
 
 
 ?>
@@ -58,12 +63,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
                   <?php
                   if(loggedin()){
-                    echo '<li style="padding-left:400px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+                    echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
                     echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
 
                   }
                   else{
-                      echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+                      echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
                       header('Location:login.php');
                   }
                    ?>
@@ -142,6 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        		die(mysql_error());
 	        	}
 	        echo "Employee ID " .$id_c. " is approved. <br>";
+					header("refresh:3; url=admin.php");
 	        }
 	    }
        ?>
