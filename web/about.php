@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<span class="icon-bar"></span>
 								</button>
 								<h1>
-									<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
+									<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 								</h1>
 					</div>
 					<!-- navbar-header -->
@@ -61,10 +61,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav">
 							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php" class="active">About</a></li>
 							<li><a href="services.html">Admissions</a></li>
+							<li><a href="events.html">Events</a></li>
+						
 							<li><a href="gallery.html">Gallery</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
@@ -94,76 +96,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 </div>
-<div class="about-agile inner-padding">
-	<div class="container">
-		<h3 class="heading-agileinfo white-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
-		<p>“Ideas shape the course of history as the pen is mightier than the sword.”</p>
-			<div class="more-button">
-				<a href="contact.html">Mail Us</a>
-			</div>
-	</div>
-</div>
+
+
+
 <!-- //about inner -->
 <!-- Team -->
 <div class="team" id="team">
 		<div class="container">
-		<h3 class="heading-agileinfo">Meet Our Staff<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
+		<h3 class="heading-agileinfo">School Facilities<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
 			<div class="agile_team_grids">
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/t1.jpg" alt=" " class="img-responsive">
+						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/_DSC0334.jpg" alt=" " class="img-responsive">
 						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
+							<h5>Science Lab</h5>
+							<!-- <p></p> -->
+							
 						</div>
 					</div>
-					<h4>Daniel</h4>
-					<p>Director</p>
+					<h4>Science Lab</h4>
+					<!-- <p>Director</p> -->
 				</div>
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/t2.jpg" alt=" " class="img-responsive">
+						<img src="/vikasTechnoSchool/School_Pictures_and_Report/DSC_3064.jpg" alt=" " class="img-responsive">
 						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
+							<h5>Play room for pre-primary school</h5>
+							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
+							
 						</div>
 					</div>
-					<h4>Smith Carl</h4>
-					<p>Pricipal</p>
+					<h4>Play room for pre-primary school</h4>
+					<!-- <p>Pricipal</p> -->
 				</div>
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/t3.jpg" alt=" " class="img-responsive">
+						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/11-new.jpg" alt=" " class="img-responsive">
 						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
+							<h5>Computer Lab</h5>
+							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
+							<!-- <div class="agileits_social_icons">
 								<ul class="agileits_social_list">
 									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 								</ul>
-							</div>
+							</div> -->
 						</div>
 					</div>
-					<h4>James Mac</h4>
-					<p>Teacher</p>
+					<h4>Computer Lab</h4>
+					<!-- <p>Teacher</p> -->
 				</div>
-				<div class="col-md-3 agile_team_grid">
+			<!-- 	<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
 						<img src="images/t4.jpg" alt=" " class="img-responsive">
 						<div class="mask">
@@ -180,13 +164,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<h4>Mary Winkler</h4>
 					<p>Teacher</p>
-				</div>
+				</div> -->
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 	<!-- //Team -->
 <!-- footer -->
+
+<div class="about-agile inner-padding">
+	<div class="container">
+		<h3 class="heading-agileinfo black-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
+		<p style="color: black" >“Ideas shape the course of history as the pen is mightier than the sword.”</p>
+			<div class="more-button">
+				<a href="contact.html">Mail Us</a>
+			</div>
+	</div>
+</div>
 
 <div class="contact-w3ls ">
 <div class="contact-top-w3-agile">
@@ -202,9 +196,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 		<div class="copy">
 				<ul class="banner-menu-w3layouts">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="services.html">Admissions</a></li>
+					<li><a href="events.html">Events</a></li>
+
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>

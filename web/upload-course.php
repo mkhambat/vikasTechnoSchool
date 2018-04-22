@@ -73,7 +73,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="upload-course.php">Upload Syllabus</a></li>
-								<li><a href="icons.html">Icons</a></li>
+								<li><a href="view-courses.php">View Courses</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
@@ -99,20 +99,24 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		
 
 		<div class="container">
-			<h3 class="heading-agileinfo">Upload photos to gallery</h3>
+			<h3 class="heading-agileinfo">Upload Course Syllabus</h3>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
 					<input type="file" name="fileToUpload" id="fileToUpload">
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
-				<form action="upload.php" method="post" enctype="multipart/form-data">
+				<form action="upload-course.php" method="post" enctype="multipart/form-data">
 					<table align="center">
+					<tr>
+						<td><input type="text" name="coursename" placeholder="Course Name"></td>
+					</tr>
 						<tr>
 							<td><!-- <input type="file" name="files[]" multiple/> --><input type="file" name="fileToUpload" id="fileToUpload"></td>
+							
 						</tr>
 						<tr>
-							<td  ><input type="submit" value="Upload Image" name="submit" id="submit"/></td>
+							<td  ><input type="submit" value="Upload Course" name="submit" id="submit"/></td>
 						</tr>
 					</table>
 				</form>
@@ -121,37 +125,70 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
-	$target_dir = "images/";
+	$target_dir = "courses/";
+	$coursename = $_POST['coursename'];
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
-	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	//$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	$file_type = $_FILES['fileToUpload']['type'];
+	echo "this.".$file_type;
+
+if ($file_type=="application/pdf") {
+
+ if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file))
+
+ {
+ 	require 'connect.inc.php';
+	$sql= "INSERT INTO courses(course_name,file_path) VALUES('$coursename','$target_file')";
+  mysqli_query($con,$sql);
+  echo 'inserted';
+ echo "The file ". basename( $_FILES['fileToUpload']['name']). " is uploaded";
+
+ }
+
+ else {
+
+ echo "Problem uploading file";
+
+ }
+
+}
+
+else {
+
+ echo "You may only upload PDFs, JPEGs or GIF files.<br>";
+
+}
+
+
+
+/*	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	if($check !== false) {
 		echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
 		echo "File is not an image.";
 		$uploadOk = 0;
-	}
-
+		}
+*/
 // Check if file already exists
-	if (file_exists($target_file)) {
+/*	if (file_exists($target_file)) {
 		echo "Sorry, file already exists.";
 		$uploadOk = 0;
 	}
-// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 5000000) {
+*/// Check file size
+	/*if ($_FILES["fileToUpload"]["size"] > 5000000) {
 		echo "Sorry, your file is too large.";
 		$uploadOk = 0;
-	}
+	}*/
 // Allow certain file formats
-	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	/*if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 		&& $imageFileType != "gif" ) {
 		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 	$uploadOk = 0;
-}
+}*/
 // Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
+/*if ($uploadOk == 0) {
 	echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
@@ -160,7 +197,7 @@ if ($uploadOk == 0) {
 	} else {
 		echo "Sorry, there was an error uploading your file.";
 	}
-}
+}*/
 }
 ?>
 

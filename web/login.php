@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
             <button class="btn btn-md btn-primary btn-block" type="submit">Login</button>
             <div style="font-size:16px; margin-top:15px" align="center">
-            <a href="registeration.html">Register</a> - <a href="#">Forgot Password</a>
+            <a href="registeration.html">Register</a> - <a href="forgotPassword.php">Forgot Password</a>
           </div>
 					<div class="invalid" style="padding-top:10px">
 						<?php
