@@ -27,7 +27,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>VTS</title>
+<title>VTS - Login</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<span class="icon-bar"></span>
 								</button>
 								<h1>
-									<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
+									<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 								</h1>
 					</div>
 					<!-- navbar-header -->
@@ -72,8 +72,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 									<?php
+
 									 ?>
-									<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+									<li style="padding-left:700px; margin-top:-50px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
 								</ul>
 							</div>
 
@@ -81,18 +82,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.php" class="active">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="admissions.php">Admissions</a></li>
+							<li><a href="events.php">Events</a></li>
+
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="codes.html">Short Codes</a></li>
-									<li><a href="icons.html">Icons</a></li>
+
+									<li><a href="gallery.php">View Gallery</a></li>
+									<?php
+									if(loggedin()) {
+
+
+									echo'<li><a href="upload.php">Upload photos</a></li>';
+								}
+									?>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="view-courses.php">View Courses</a></li>
+									<?php
+									if(loggedin()) {
+									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+								}
+								?>
+								</ul>
+							</li>
+							<li><a href="contact.php">Contact</a></li>
+							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+								echo'<li><a href="admin.php">Admin Panel</a></li>';
+
+							}
+							 ?>
 						</ul>
 
 					</div>
@@ -166,6 +191,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 	</div>
 </div>
+</div>
+
+<div class="contact-w3ls ">
+<div class="contact-top-w3-agile">
+</div>
+	<div class="container">
+		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
+		<ul class="w3_address">
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
+		</ul>
+			<div class="clearfix"></div>
+		<div class="copy">
+				<ul class="banner-menu-w3layouts">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="admissions.php">Admissions</a></li>
+					<li><a href="events.php">Events</a></li>
+
+					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="view-courses.php">Courses</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+				<!-- <ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul> -->
+				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+		</div>
+	</div>
 </div>
 
 

@@ -1,33 +1,40 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
 <?php
 require 'essentials.php';
 $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 ?>
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-<title>VTS - About</title>
+<title>VTS - Admissions</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" /> -->
+<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- // custom-theme -->
 <!--css links-->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-->
 <link href="css/font-awesome.css" rel="stylesheet"><!--font-awesome-->
-<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts-->
-<!-- <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+<!--fonts--><!-- 
+<link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
 </head>
 <body>
 <!-- Header -->
-<div id="home" class="banner w3l">
+<div id="home" class="banner inner-banner-w3l">
 		<div class="header-nav">
 			<nav class="navbar navbar-default">
 			<div class="header-top">
@@ -54,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							}
 							else{
-									echo '<li style="padding-left:700px; margin-top:-50px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+									echo '<li style="padding-left:700px; margin-top: -50px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 								}
 							?>
 						</ul>
@@ -64,8 +71,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<ul class="nav navbar-nav ">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php" class="active" >About</a></li>
-							<li><a href="admissions.php">Admissions</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="admissions.php" class="active">Admissions</a></li>
 							<li><a href="events.php">Events</a></li>
 
 							<li class="dropdown">
@@ -102,108 +109,65 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</ul>
 
 					</div>
-					<div class="clearfix"> </div>
+					<div class="clearfix"> </div>	
 				</nav>
 							<div class="clearfix"> </div>
 		</div>
-	</div>
+</div>	
 <!-- //Header -->
-<!-- about inner -->
-<div class="about-bottom inner-padding">
-	<div class="container">
-	<h3 class="heading-agileinfo">About Us<span>Redefining School</span></h3>
-				<div class="about-bott-right">
-					 <h5>Who We Are</h5>
-					 <p>We are a Private school located in Andra Pradesh, the southern state of India. Currently, home to over 2000 students, we provides quality education and all-round development of students between the age of 5-18 years. Since our establishment in 2011, we have been the only major private sector school in the area. Employing 120 staffs and teachers, we has been a spearhead in providing quality education to students in Vissannapeta, Andra Pradesh. </p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-</div>
-
-
-
-<!-- //about inner -->
-<!-- Team -->
-<div class="team" id="team">
-		<div class="container">
-		<h3 class="heading-agileinfo">School Facilities<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
-			<div class="agile_team_grids">
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/_DSC0334.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Science Lab</h5>
-							<!-- <p></p> -->
-
-						</div>
+<!-- services inner -->
+<div class="agileinfo_services_grids inner-padding">
+<div class="container">
+<h3 class="heading-agileinfo">Documents required for admissions<!-- <span>We are giving special services</span> --></h3>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-female" aria-hidden="true"></i> -->
+						<h4>Aadhar Card</h4>
+						<p>Aadhar Card of the student and parent</p>
 					</div>
-					<h4>Science Lab</h4>
-					<!-- <p>Director</p> -->
 				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/School_Pictures_and_Report/DSC_3064.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Play room for pre-primary school</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-
-						</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-group" aria-hidden="true"></i> -->
+						<h4>Cast Certificate</h4>
+						<p>Caste certificate of student and parent (Example: SC, ST, OBC.)</p>
 					</div>
-					<h4>Play room for pre-primary school</h4>
-					<!-- <p>Pricipal</p> -->
 				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/11-new.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Computer Lab</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-							<!-- <div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div> -->
-						</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+						<h4>Study certificate</h4>
+						<p>If the student is taking a transfer, we will require their study certificate from previous school.</p>
 					</div>
-					<h4>Computer Lab</h4>
-					<!-- <p>Teacher</p> -->
 				</div>
-			<!-- 	<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="images/t4.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+						<h4>Transfer Certificate</h4>
+						<p>If the student is taking a transfer, we will require their transfer certificate from previous school.</p>
 					</div>
-					<h4>Mary Winkler</h4>
-					<p>Teacher</p>
+				</div>
+				<!-- <div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<i class="fa fa-group" aria-hidden="true"></i>
+						<h4>Social Programs</h4>
+						<p>Quisque consectetur, sem id sagittis sodales, augue diam consequat mi, 
+							sed suscipit turpis diam eget nisl.</p>
+					</div>
+				</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<i class="fa fa-trophy" aria-hidden="true"></i>
+						<h4>Special Olympics</h4>
+						<p>Quisque consectetur, sem id sagittis sodales, augue diam consequat mi, 
+							sed suscipit turpis diam eget nisl.</p>
+					</div>
 				</div> -->
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //Team -->
-<!-- footer -->
-
-<div class="about-agile inner-padding">
-	<div class="container">
-		<h3 class="heading-agileinfo black-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
-		<p style="color: black" >“Ideas shape the course of history as the pen is mightier than the sword.”</p>
-			<div class="more-button">
-				<a href="contact.html">Mail Us</a>
-			</div>
 	</div>
 </div>
+	<!-- //services inner -->
+<!-- footer -->
 
 <div class="contact-w3ls ">
 <div class="contact-top-w3-agile">
@@ -248,7 +212,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
+		$(".scroll").click(function(event){		
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -263,9 +227,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear'
+			easingType: 'linear' 
 			};
-		*/
+		*/								
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>

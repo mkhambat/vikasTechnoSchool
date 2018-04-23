@@ -1452,6 +1452,7 @@ figure img {
     transition: all 300ms ease-in-out;
     z-index: 1;
     width: 100%;
+    height: 230;
     overflow: hidden;
     position: relative;
 }
