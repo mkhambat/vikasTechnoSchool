@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
 								<ul>
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
                   <?php
                   if(loggedin()){
                     echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
@@ -108,9 +108,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         echo"<form action='admin.php' method= 'POST'>
         <table border= 1 width=400>
         <tr>
-        <th>Select</th>
-        <th>EmpID</th>
-        <th>Email</th>
+        <th class='text-center'>Select</th>
+        <th class='text-center'>EmpID</th>
+        <th class='text-center'>Email</th>
         </tr>";
         $query="SELECT `EmpID`,`Email` FROM `registeration` WHERE `Approved_status`!='Yes' LIMIT 0, 30 ";
         if($query_run_1=mysqli_query($con,$query))
@@ -121,9 +121,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $Email=$query_row_1['Email'];
             echo '<tr>';
             // echo'<td><input type="checkbox" name="checkboxlist" class= case value="'.$Emp.'" /></td>';
-						echo'<td><input type="checkbox" name="EmpID[]" class= case value='.$Emp.' /></td>';
-            echo'<td>'.$Emp.'</td>';
-            echo'<td>'.$Email.'</td>';
+						echo'<td align="center"><input type="checkbox" name="EmpID[]" class= case value='.$Emp.' /></td>';
+            echo'<td align="center">'.$Emp.'</td>';
+            echo'<td align="center">'.$Email.'</td>';
             echo '</tr>';
           }
         }
