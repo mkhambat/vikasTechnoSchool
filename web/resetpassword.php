@@ -79,60 +79,19 @@
 <?php
 
 //start session
+
+if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_POST['fp_code'])){
+    
+    if($_POST['password'] !== $_POST['confirm_password']){
+            $sessData['status']['type'] = 'error';
+            $sessData['status']['msg'] = 'Confirm password must match with the password.'; 
+        }else{
+
+          require 'connect.inc.php';
+           $sql= "select * from registeration where ";
+  mysqli_query($con,$sql);
+        }
    
-    if(isset($_POST['forgotSubmit'])){
-    //check whether email is empty
-      if(!empty($_POST['email'])){
-        
-        
-        $uniqidStr = md5(uniqid(mt_rand()));
-        $resetPassLink = 'http://localhost/vikasTechnoSchool/web/resetpassword.php?fp_code='.$uniqidStr;
-
-        $to = $_POST['email'];
-        $subject = "Password Update Request";
-        $mailContent = 'Dear, 
-        <br/>Recently a request was submitted to reset a password for your account. If this was a mistake, just ignore this email and nothing will happen.
-        <br/>To reset your password, visit the following link: <a href="'.$resetPassLink.'">'.$resetPassLink.'</a>
-        <br/><br/>Regards,
-        <br/>CodexWorld';
-                //set content-type header for sending HTML email
-     //   $headers = "MIME-Version: 1.0" . "\r\n";
-       // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                //additional headers
-        $headers = 'From: Varun' . "\r\n";
-                //send email
-   
-        // ini_set("SMTP","ssl://smtp.gmail.com");
-        //ini_set("smtp_port","587");
-   
-        mail($to,$subject,$mailContent,$headers);
-
-   
-  // mail("varun.machingal@gmail.com",$subject,"hi","From: vaun.machingal@gmail.com\n");
-
-
-
-        $sessData['status']['type'] = 'success';
-        $sessData['status']['msg'] = 'Please check your e-mail, we have sent a password reset link to your registered email.';
-        $statusMsg = $sessData['status']['msg'];
-        $statusMsgType = $sessData['status']['type'];
-      }else{
-        $sessData['status']['type'] = 'error';
-        $sessData['status']['msg'] = 'Some problem occurred, please try again.';
-        $statusMsg = $sessData['status']['msg'];
-        $statusMsgType = $sessData['status']['type'];
-      }
-      
-
-      $sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
-      if(!empty($sessData['status']['msg'])){
-        $statusMsg = $sessData['status']['msg'];
-        $statusMsgType = $sessData['status']['type'];
-        unset($_SESSION['sessData']['status']);
-      }
-    }else{
-        $statusMsg = "";
-    }   
       ?>
 
 
@@ -151,13 +110,17 @@
     <div class-"row">
       <div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
 
-<form  style="padding-top:20px;margin-top:20px;" action="forgotPassword.php" method="POST">
-        <p>Enter the Email of Your Account to Reset New Password</p>
+<form  style="padding-top:20px;margin-top:20px;" action="resetpassword.php" method="POST">
+        <h2>Reset Account Password</h2>
             <div class="input-group" style="width:100%">
-              <input type="email" name="email" placeholder="EMAIL" required="">
-              <button class="btn btn-md btn-primary btn-block" name="forgotSubmit" type="submit" style="width: 150px">continue</button>
+              <input type="password" name="password" placeholder="PASSWORD" required="">
+            <input type="password" name="confirm_password" placeholder="CONFIRM PASSWORD" required="">
+            <button class="btn btn-md btn-primary btn-block" name="resetSubmit" type="submit" style="width: 150px">Reset Password</button>
+            <input type="hidden" name="fp_code" value="<?php echo $_REQUEST['fp_code']; ?>"/>
+
           </div>
           </form>
+
   <?php echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; ?>
     
 </div>
