@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					}
 					else{
-							echo '<li style="padding-left:700px; margin-top: -50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+							echo '<li style="padding-left:700px; margin-top: -50px;"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 						}
 					?>
 				</ul>
@@ -102,7 +102,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</li>
 							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
+								echo '<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="admin.php">VIEW USERS</a></li>
+										<li><a href="admin_approval.php">APPROVE USERS</a></li>';
+
 
 							}
 							 ?>
@@ -125,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container" style="padding-top:20px">
 			<div class-"row">
 				<div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
-					<h2 class="form-signin-heading" align="center">Course Syllabus</h2>
+					<h3 class="heading-agileinfo" align="center" style="margin-bottom:1em;margin-top:2em">Course Syllabus</h2>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
@@ -133,8 +138,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
 				<?php
-				echo '<form action="view-courses.php"  style="padding-top:20px" method="post">
-				<table border= 1 width=400>
+				echo '<form action="view-courses.php" method="post">
+				<table class = "table" border= 1 width=400>
         <tr>
 
         <th class="text-center">Class</th>
@@ -175,8 +180,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  	 	          if($result2 === false) {
  	 	        		die(mysql_error());
  	 	        	}
- 	 	        echo "Course ID " .$id_c. " is deleted. <br>";
- 	 					header("refresh:2; url=view-courses.php");
+
+ 	 					header("refresh:1; url=view-courses.php");
  	 	        }
  	 	    }
 			?>

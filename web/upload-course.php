@@ -101,7 +101,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</li>
 						<li><a href="contact.php">Contact</a></li>
 						<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-							echo'<li><a href="admin.php">Admin Panel</a></li>';
+							echo '<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="admin.php">VIEW USERS</a></li>
+									<li><a href="admin_approval.php">APPROVE USERS</a></li>';
+
 
 						}
 						?>
@@ -123,14 +128,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class-"row">
 			<div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
 				<!-- <h3 class="heading-agileinfo">Upload Course Syllabus</h3> -->
-				<h2 class="form-signin-heading" align="center">Upload Course Syllabus</h2>
+				<h3 class="heading-agileinfo" align="center" style="margin-bottom:1em; margin-top:2em;">Upload Course Syllabus</h2>
 				<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
 					<input type="file" name="fileToUpload" id="fileToUpload">
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
-				<form action="upload-course.php"  style="padding-top:20px" method="post" enctype="multipart/form-data">
+				<form action="upload-course.php" method="post" enctype="multipart/form-data">
 					<!-- <table align="center"> -->
 						<div class="form-group" style="width:40%">
 							<label for="division">Select Class:</label>
@@ -196,7 +201,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 										$sql= "INSERT INTO courses(Division,course_name,file_path) VALUES('$divison','$coursename','$target_file')";
 										mysqli_query($con,$sql);
-										echo 'inserted';
+										// echo 'inserted';
 										echo "The file ". basename( $_FILES['fileToUpload']['name']). " is uploaded";
 
 									}

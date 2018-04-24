@@ -102,7 +102,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>
 							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
+								echo '<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+                    <li><a href="admin.php">VIEW USERS</a></li>
+										<li><a href="admin_approval.php">APPROVE USERS</a></li>';
 
 							}
 							 ?>
@@ -116,12 +120,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //Header -->
 	<!-- gallery inner -->
-	<div class="inner-padding">
+	<!-- <div class="inner-padding"> -->
 
 
 
-		<div class="container">
-			<h3 class="heading-agileinfo">Upload photos to gallery</h3>
+		<div class="container" style="padding-top:20px;">
+			<!-- <h3 class="heading-agileinfo">Upload photos to gallery</h3> -->
+			<div class-"row">
+				<div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+					<!-- <h3 class="heading-agileinfo">Upload Course Syllabus</h3> -->
+					<h3 class="heading-agileinfo" align="center" style="margin-bottom:1.2em; margin-top:2em;">Upload photos to Gallery</h2>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
@@ -129,15 +137,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
 				<form action="upload.php" method="post" enctype="multipart/form-data">
-					<table align="center">
+					<!-- <table align="center">
 						<tr>
-							<td><!-- <input type="file" name="files[]" multiple/> --><input type="file" name="fileToUpload" id="fileToUpload"></td>
-						</tr>
+							<!- <td><!- <input type="file" name="files[]" multiple/> -->
+							<!-- <input type="file" name="fileToUpload" id="fileToUpload"></td>  -->
+						<!-- </tr>
 						<tr>
 							<td  ><input type="submit" value="Upload Image" name="submit" id="submit"/></td>
 						</tr>
-					</table>
+					</table> -->
+					<div class="form-group">
+						<label style="padding-bottom:10px;" for="fileToUpload">File:</label>
+						<input type="file" name="fileToUpload" id="fileToUpload"></td>
+					</div>
+
+					<div class="form-group" style="padding-top:20px;">
+
+						<input type="submit" value="Upload Image" name="submit" id="submit"/></td>
+					</div>
+
 				</form>
+
 
 				<?php
 

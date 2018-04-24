@@ -105,6 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="view-courses.php">View Courses</a></li>
 									<?php
 									if(loggedin()) {
+
 									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
 								}
 								?>
@@ -112,9 +113,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>
 							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
+								echo '<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+                    <li><a href="admin.php">VIEW USERS</a></li>
+										<li><a href="admin_approval.php">APPROVE USERS</a></li>';
 
-							}
+									}
+
+
+
 							 ?>
 						</ul>
 
@@ -125,37 +133,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="clearfix"> </div>
 		</div>
 
-		<div class="container" style="padding-top:50px">
+		<div class="container">
     <div class-"row">
-    <div class="col-md-6"style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+    <div class="col-md-6"style="color:#2e2b2c; float : none; margin:0 auto; width:40">
+		<h3 class="heading-agileinfo" align="center" style="margin-bottom:1em; margin-top:2em;">Admin Panel</h3>
       <?php
 
         echo"<form action='admin.php' method= 'POST'>
-        <table border= 1 width=400>
+        <table class='table'border= 1 width=400>
         <tr>
         <th class='text-center'>Select</th>
         <th class='text-center'>EmpID</th>
+				<th class='text-center'>First Name</th>
+				<th class='text-center'>Last Name</th>
         <th class='text-center'>Email</th>
+				<th class='text-center'>Approved Status</th>
         </tr>";
-        $query="SELECT `EmpID`,`Email` FROM `registeration` WHERE `Approved_status`!='Yes' LIMIT 0, 30 ";
+        $query="SELECT `EmpID`,`Email`,`First`,`Last`,`Approved_status` FROM `registeration` WHERE `Approved_status`='Yes' LIMIT 0, 30 ";
         if($query_run_1=mysqli_query($con,$query))
         {
         while ($query_row_1=mysqli_fetch_array($query_run_1,MYSQLI_ASSOC))
           {
             $Emp=$query_row_1['EmpID'];
             $Email=$query_row_1['Email'];
+						$First= $query_row_1['First'];
+						$Last= $query_row_1['Last'];
+						$App= $query_row_1['Approved_status'];
             echo '<tr>';
             // echo'<td><input type="checkbox" name="checkboxlist" class= case value="'.$Emp.'" /></td>';
 						echo'<td align="center"><input type="checkbox" name="EmpID[]" class= case value='.$Emp.' /></td>';
             echo'<td align="center">'.$Emp.'</td>';
+						echo'<td align="center">'.$First.'</td>';
+						echo'<td align="center">'.$Last.'</td>';
             echo'<td align="center">'.$Email.'</td>';
+						echo'<td align="center">'.$App.'</td>';
             echo '</tr>';
           }
         }
 
         echo '</table>';
         echo '<br>';
-        echo '<input type="submit" value="Approve" id="buttonClass">';
+        echo '<input style="margin-left:250px" type="submit" value="Delete User(s)" id="buttonClass ">';
         echo'</form>';
 
 
@@ -165,14 +183,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        foreach($_POST['EmpID'] as $val){
 					// // 	echo $val;
 	        	$id_c = $val;
-						echo $id_c;
-	          $query2 = "UPDATE `registeration` SET `Approved_status` = 'Yes' where EmpID='".$id_c."'";
+						
+	          $query2 = "DELETE  FROM `registeration` where EmpID='".$id_c."'";
 	          $result2 = mysqli_query($con,$query2);
 	          if($result2 === false) {
 	        		die(mysql_error());
 	        	}
-	        echo "Employee ID " .$id_c. " is approved. <br>";
-					header("refresh:3; url=admin.php");
+
+					header("refresh:1; url=admin.php");
 	        }
 	    }
        ?>
@@ -218,6 +236,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 </div>
+
+
+!--//footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!--//js -->
+<!-- light-case -->
+<script src="js/lightcase.js"></script>
+<script src="js/jquery.events.touch.js"></script>
+<script>
+	$('.showcase').lightcase();
+</script>
+<!-- //light-case -->
+<script src="js/SmoothScroll.min.js"></script>
+<!--Scrolling-top -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--//Scrolling-top -->
+<!-- smooth scrolling -->
+<script type="text/javascript">
+	$(document).ready(function() {
+	/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear'
+		};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
 
 </body>
 </html>

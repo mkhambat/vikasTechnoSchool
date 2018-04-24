@@ -73,9 +73,9 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 									<?php
-										
+
 									 ?>
-									<li style="padding-left:700px; margin-top:-50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
+									<li style="padding-left:700px; margin-top:-50px;"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
 								</ul>
 							</div>
 
@@ -113,7 +113,12 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 							</li>
 							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
+								echo '<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+                    <li><a href="admin.php">VIEW USERS</a></li>
+										<li><a href="admin_approval.php">APPROVE USERS</a></li>';
+
 							}
 							?>
 						</ul>
@@ -127,7 +132,8 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 		<div class="container" style="padding-top:20px">
 			<div class-"row">
 				<div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
-					<h2 class="form-signin-heading" align="center">Login here!</h2>
+					<!-- <h2 class="form-signin-heading" align="center">Login here!</h2> -->
+						<h3 class="heading-agileinfo" align="center" style="margin-bottom:1em; margin-top:2em;">Login here!</h3>
 
 					<form class="form-signin" style="padding-top:20px;margin-top:20px;" action="login.php" method="POST">
 						<div class="input-group" style="width:100%">
@@ -138,7 +144,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 						</div>
 						<button class="btn btn-md btn-primary btn-block" type="submit">Login</button>
 						<div style="font-size:16px; margin-top:15px" align="center">
-							<a href="registeration.html">Register</a> - <a href="forgotPassword.php">Forgot Password</a>
+							<a href="registeration.php">Register</a> - <a href="forgotPassword.php">Forgot Password</a>
 						</div>
 						<div class="invalid" style="padding-top:10px">
 							<?php
@@ -238,7 +244,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+			$(".scroll").click(function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
@@ -253,9 +259,9 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-			*/								
+			*/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>

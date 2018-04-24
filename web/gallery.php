@@ -17,7 +17,7 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -28,7 +28,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/lightcase.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts--><!-- 
+<!--fonts--><!--
 <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
@@ -62,7 +62,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							}
 							else{
-								echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+								echo '<li style="padding-left:700px; margin-top: -50px;" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 							}
 							?>
 						</ul>
@@ -103,18 +103,23 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</li>
 						<li><a href="contact.php">Contact</a></li>
 						<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-							echo'<li><a href="admin.php">Admin Panel</a></li>';
+							echo '<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="admin.php">VIEW USERS</a></li>
+									<li><a href="admin_approval.php">APPROVE USERS</a></li>';
+
 
 						}
 						?>
 					</ul>
 
 				</div>
-				<div class="clearfix"> </div>	
+				<div class="clearfix"> </div>
 			</nav>
 			<div class="clearfix"> </div>
 		</div>
-	</div>	
+	</div>
 	<!-- //Header -->
 	<!-- gallery inner -->
 	<div class="inner-padding">
@@ -122,7 +127,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			<h3 class="heading-agileinfo">Our gallery<!-- <span>Lorem ipsum dolor sit amet elit.</span> --></h3>
 			<div class="w3ls_portfolio_grids">
-				
+
 
 
 				<?php
@@ -137,13 +142,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
 						<div class="row" style="display: table;">
-							
+
 							<?php  } ?>
 
 							<div class="column" style="width: 33.33%;float: left; width: 33.33%; padding: 5px;">
-								
+
 								<a href="<?php echo $image?>" class="showcase" data-rel="lightcase:myCollection:slideshow" title="VTS">
-									<div class="agileits_portfolio_sub_grid agileits_w3layouts_team_grid">	
+									<div class="agileits_portfolio_sub_grid agileits_w3layouts_team_grid">
 										<div class="w3layouts_port_head">
 											<h3>VTS</h3>
 										</div>
@@ -158,15 +163,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							if($imageCount == 3){
 								$imageCount = 0;
 								?>
-								
-							</div>	
+
+							</div>
 
 							<?php
 						}
-					}	
+					}
 
 					?>
-					
+
 
 				</div>
 				<div class="clearfix"> </div>
@@ -225,7 +230,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+			$(".scroll").click(function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
@@ -240,9 +245,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-			*/								
+			*/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>

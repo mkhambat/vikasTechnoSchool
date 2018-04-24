@@ -47,7 +47,7 @@
               <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
               <?php
               ?>
-              <li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+              <li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
             </ul>
           </div>
 
@@ -84,14 +84,14 @@ require 'essentials.php';
 
 
 if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_POST['fp_code'])){
-    
+
 
      $fp_code = $_POST['fp_code'];
     if($_POST['password'] !== $_POST['confirm_password']){
             $statusMsgType = 'error';
-            $statusMsg = 'Confirm password must match with the password.'; 
+            $statusMsg = 'Confirm password must match with the password.';
         }else{
-           $pass = md5($_POST['password']); 
+           $pass = md5($_POST['password']);
            $sql= "select * from registeration where U_Str = '$fp_code'";
            if($query_run=mysqli_query($con,$sql))
                   {
@@ -99,14 +99,14 @@ if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_
                     $row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
                     $empId = $row['EmpID'];
                     $sql1 = "Update registeration set Password = '$pass'  where EmpID = '$empId'";
-                    mysqli_query($con,$sql1);     
+                    mysqli_query($con,$sql1);
                     $statusMsgType = 'sucess';
-                   $statusMsg = 'Password successfully changed.';       
+                   $statusMsg = 'Password successfully changed.';
                   }
 
         }
       }
-   
+
       ?>
 
 
@@ -137,19 +137,14 @@ if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_
           </form>
 
   <?php echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; ?>
-    
+
 </div>
 </div>
 </div>
 
 
-       
+
     </div>
 
   </body>
   </html>
-
-
-
-
-   

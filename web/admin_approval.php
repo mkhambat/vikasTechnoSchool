@@ -1,31 +1,39 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <?php
 require 'essentials.php';
-$_SESSION['url'] = $_SERVER['REQUEST_URI'];
+if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']!='Yes' ){
+	header('Location: index.php');
+
+}
+else{
+	$query="SELECT `EmpID`,`Email` FROM `registeration` LIMIT 0, 30 ";
+
+}
+
+
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>VTS - Contact</title>
+<title>VTS - Admin</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" /> -->
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="checkbox.js"></script> -->
+
+
+
 <!-- // custom-theme -->
 <!--css links-->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-->
 <link href="css/font-awesome.css" rel="stylesheet"><!--font-awesome-->
-<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
 <!--fonts-->
 <!-- <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
@@ -34,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- Header -->
-<div id="home" class="banner inner-banner-w3l">
+<div id="home" class="banner w3l">
 		<div class="header-nav">
 			<nav class="navbar navbar-default">
 			<div class="header-top">
@@ -53,23 +61,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="contact-bnr-w3-agile">
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
-							<?php
+                  <?php
+                  if(loggedin()){
+                    echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+                    echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
 
-							if(loggedin()){
-								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
-								echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+                  }
+                  else{
+                      echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+                      header('Location:login.php');
+                  }
+                   ?>
+									<!-- <li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li> -->
+								</ul>
+							</div>
 
-							}
-							else{
-									echo '<li style="padding-left:700px; margin-top:-50px;"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
-								}
-							?>
-						</ul>
-							</div>
-							</div>
+					</div>
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
-						<ul class="nav navbar-nav ">
+						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="admissions.php">Admissions</a></li>
@@ -100,93 +110,86 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								?>
 								</ul>
 							</li>
-							<li><a href="contact.php"  class="active" >Contact</a></li>
+							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
 								echo '<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel<span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="admin.php">VIEW USERS</a></li>
+                    <li><a href="admin.php">VIEW USERS</a></li>
 										<li><a href="admin_approval.php">APPROVE USERS</a></li>';
-
 
 							}
 							 ?>
 						</ul>
+
 
 					</div>
 					<div class="clearfix"> </div>
 				</nav>
 							<div class="clearfix"> </div>
 		</div>
+
+		<div class="container">
+    <div class-"row">
+    <div class="col-md-6"style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+			<h3 class="heading-agileinfo" align="center" style="margin-bottom:1em; margin-top:2em;">Approve Users</h3>
+      <?php
+
+        echo"<form action='admin.php' method= 'POST'>
+        <table class= 'table' border= 1 width=400>
+        <tr>
+        <th class='text-center'>Select</th>
+        <th class='text-center'>EmpID</th>
+        <th class='text-center'>Email</th>
+        </tr>";
+        $query="SELECT `EmpID`,`Email` FROM `registeration` WHERE `Approved_status`!='Yes' LIMIT 0, 30 ";
+        if($query_run_1=mysqli_query($con,$query))
+        {
+        while ($query_row_1=mysqli_fetch_array($query_run_1,MYSQLI_ASSOC))
+          {
+            $Emp=$query_row_1['EmpID'];
+            $Email=$query_row_1['Email'];
+            echo '<tr>';
+            // echo'<td><input type="checkbox" name="checkboxlist" class= case value="'.$Emp.'" /></td>';
+						echo'<td align="center"><input type="checkbox" name="EmpID[]" class= case value='.$Emp.' /></td>';
+            echo'<td align="center">'.$Emp.'</td>';
+            echo'<td align="center">'.$Email.'</td>';
+            echo '</tr>';
+          }
+        }
+
+        echo '</table>';
+        echo '<br>';
+        echo '<input  style= "margin-left:150px" type="submit" value="Approve" id="buttonClass">';
+        echo'</form>';
+
+
+
+			if(isset($_POST['EmpID']) ){
+
+	        foreach($_POST['EmpID'] as $val){
+					// // 	echo $val;
+	        	$id_c = $val;
+						
+	          $query2 = "UPDATE `registeration` SET `Approved_status` = 'Yes' where EmpID='".$id_c."'";
+	          $result2 = mysqli_query($con,$query2);
+	          if($result2 === false) {
+	        		die(mysql_error());
+	        	}
+
+					header("location:admin.php");
+					exit();
+	        }
+	    }
+       ?>
+
+
+
+	</div>
+  </div>
+	</div>
+
 </div>
-<!-- //Header -->
-<!-- Mail Us inner -->
-<div class="contact-page-w3ls inner-padding">
-	<div class="container">
-	<h3 class="heading-agileinfo">Mail Us<!-- <span>Cras eleifend hendrerit libero</span> --></h3>
-	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe> -->
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.611396154278!2d80.77965852668783!3d16.944450614731316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35d64c1167f2b9%3A0x310672edaf41734!2sVikas+Techno+School!5e0!3m2!1sen!2sus!4v1523592169379" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-<div class="contact-info-w3ls">
-	<div class="contact-left-w3layouts">
-			<div class="contact-w3-agileits">
-				<!-- <img src="images/c1.jpg" alt="img"> -->
-				<div class="right-contact-w3ls">
-					<h6>Vemana Kumari Naredla</h6>
-					<p class="work-w3">Director</p>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+91 9619841320</p>
-					</div>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">vnaredla@vts.com</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="contact-w3-agileits">
-				<!-- <img src="images/c2.jpg" alt="img"> -->
-				<div class="right-contact-w3ls">
-					<h6>Narsi Reddy Naredla</h6>
-					<p class="work-w3">Chairman</p>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+91 9619873201</p>
-					</div>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">nrnaredla@vts.com</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="contact-w3-agileits">
-				<!-- <img src="images/c3.jpg" alt="img"> -->
-				<div class="right-contact-w3ls">
-					<h6>Durga Rama Rao</h6>
-					<p class="work-w3">Principal</p>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+919788432012</p>
-					</div>
-					<div class="span-sub-w3ls">
-						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">drao@vts.com</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-	</div>
-	<div class="contact-right-w3layouts">
-	<h5 class="title-w3">We Would Love To Hear From You!</h5>
-	<p class="head-w3-agileits">If you have any questions, please call us or fill in the form below and we will get back to you very soon.</p>
-		<form action="#" method="post">
-			<input type="text" name="your name" placeholder="YOUR NAME" required="">
-			<input type="email" name="your email" placeholder="YOUR EMAIL" required="">
-			<textarea name="your message" placeholder="YOUR MESSAGE" required=""></textarea>
-			<input type="submit" value="Send Message">
-		</form>
-	</div>
-	<div class="clearfix"> </div>
-	</div>
-	</div>
-</div>
-	<!-- //Mail Us inner -->
-<!-- footer -->
 
 <div class="contact-w3ls ">
 <div class="contact-top-w3-agile">
@@ -217,14 +220,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
-				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> --> </p>
+				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved.  | Design by <a href="http://w3layouts.com/">W3layouts</a>  --></p>
 		</div>
 	</div>
 </div>
-<!--//footer -->
+
+
+!--//footer -->
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!--//js -->
+<!-- light-case -->
+<script src="js/lightcase.js"></script>
+<script src="js/jquery.events.touch.js"></script>
+<script>
+	$('.showcase').lightcase();
+</script>
+<!-- //light-case -->
 <script src="js/SmoothScroll.min.js"></script>
 <!--Scrolling-top -->
 <script type="text/javascript" src="js/move-top.js"></script>
@@ -239,21 +251,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!--//Scrolling-top -->
 <!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear'
-			};
+<script type="text/javascript">
+	$(document).ready(function() {
+	/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear'
+		};
 		*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	});
+</script>
+<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+
 </body>
 </html>
