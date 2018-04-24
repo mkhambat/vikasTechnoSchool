@@ -152,6 +152,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h4>Play room for pre-primary school</h4>
 					<!-- <p>Pricipal</p> -->
 				</div>
+
+				<div class="col-md-3 agile_team_grid">
+					<div class="view view-sixth">
+						<img src="/vikasTechnoSchool/School_Pictures_and_Report/DSC_4690.jpg" alt=" " class="img-responsive">
+						<div class="mask">
+							<h5>Play ground</h5>
+							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
+
+						</div>
+					</div>
+					<h4>Play ground</h4>
+					<!-- <p>Pricipal</p> -->
+				</div>
+
+
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
 						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/11-new.jpg" alt=" " class="img-responsive">
@@ -234,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
-				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> --> </p>
 		</div>
 	</div>
 </div>

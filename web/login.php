@@ -1,3 +1,5 @@
+
+
 <?php
 require 'connect.inc.php';
 require 'session.php';
@@ -72,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul>
 									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 									<?php
-
+										
 									 ?>
 									<li style="padding-left:700px; margin-top:-50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
 								</ul>
@@ -222,7 +224,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
-				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> --> </p>
 		</div>
 	</div>
 </div>
