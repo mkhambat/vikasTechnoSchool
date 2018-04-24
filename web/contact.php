@@ -1,3 +1,10 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
 <?php
 require 'essentials.php';
 $_SESSION['url'] = $_SERVER['REQUEST_URI'];
@@ -6,7 +13,7 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>VTS - About</title>
+<title>VTS - Contact</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- Header -->
-<div id="home" class="banner w3l">
+<div id="home" class="banner inner-banner-w3l">
 		<div class="header-nav">
 			<nav class="navbar navbar-default">
 			<div class="header-top">
@@ -44,8 +51,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
-						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+								<ul>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 							<?php
 
 							if(loggedin()){
@@ -64,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<ul class="nav navbar-nav ">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php" class="active" >About</a></li>
+							<li><a href="about.php">About</a></li>
 							<li><a href="admissions.php">Admissions</a></li>
 							<li><a href="events.php">Events</a></li>
 
@@ -93,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								?>
 								</ul>
 							</li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="contact.php"  class="active" >Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
 								echo'<li><a href="admin.php">Admin Panel</a></li>';
 
@@ -102,108 +109,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</ul>
 
 					</div>
-					<div class="clearfix"> </div>
+					<div class="clearfix"> </div>	
 				</nav>
 							<div class="clearfix"> </div>
 		</div>
-	</div>
+</div>	
 <!-- //Header -->
-<!-- about inner -->
-<div class="about-bottom inner-padding">
+<!-- Mail Us inner -->
+<div class="contact-page-w3ls inner-padding">
 	<div class="container">
-	<h3 class="heading-agileinfo">About Us<span>Redefining School</span></h3>
-				<div class="about-bott-right">
-					 <h5>Who We Are</h5>
-					 <p>We are a Private school located in Andra Pradesh, the southern state of India. Currently, home to over 2000 students, we provides quality education and all-round development of students between the age of 5-18 years. Since our establishment in 2011, we have been the only major private sector school in the area. Employing 120 staffs and teachers, we has been a spearhead in providing quality education to students in Vissannapeta, Andra Pradesh. </p>
+	<h3 class="heading-agileinfo">Mail Us<!-- <span>Cras eleifend hendrerit libero</span> --></h3>
+	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe> -->
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.611396154278!2d80.77965852668783!3d16.944450614731316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35d64c1167f2b9%3A0x310672edaf41734!2sVikas+Techno+School!5e0!3m2!1sen!2sus!4v1523592169379" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="contact-info-w3ls">
+	<div class="contact-left-w3layouts">
+			<div class="contact-w3-agileits">
+				<!-- <img src="images/c1.jpg" alt="img"> -->
+				<div class="right-contact-w3ls">
+					<h6>Vemana Kumari Naredla</h6>
+					<p class="work-w3">Director</p>
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+01 243 792 96</p>
+					</div>
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">example@mail.com</a>
+					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-</div>
-
-
-
-<!-- //about inner -->
-<!-- Team -->
-<div class="team" id="team">
-		<div class="container">
-		<h3 class="heading-agileinfo">School Facilities<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
-			<div class="agile_team_grids">
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/_DSC0334.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Science Lab</h5>
-							<!-- <p></p> -->
-
-						</div>
+			<div class="contact-w3-agileits">
+				<!-- <img src="images/c2.jpg" alt="img"> -->
+				<div class="right-contact-w3ls">
+					<h6>Narsi Reddy Naredla</h6>
+					<p class="work-w3">Chairman</p>
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+01 543 338 96</p>
 					</div>
-					<h4>Science Lab</h4>
-					<!-- <p>Director</p> -->
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">example@mail.com</a>
+					</div>
 				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/School_Pictures_and_Report/DSC_3064.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Play room for pre-primary school</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-
-						</div>
-					</div>
-					<h4>Play room for pre-primary school</h4>
-					<!-- <p>Pricipal</p> -->
-				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/11-new.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Computer Lab</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-							<!-- <div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div> -->
-						</div>
-					</div>
-					<h4>Computer Lab</h4>
-					<!-- <p>Teacher</p> -->
-				</div>
-			<!-- 	<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="images/t4.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<h4>Mary Winkler</h4>
-					<p>Teacher</p>
-				</div> -->
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+			<div class="contact-w3-agileits">
+				<!-- <img src="images/c3.jpg" alt="img"> -->
+				<div class="right-contact-w3ls">
+					<h6>Durga Rama Rao</h6>
+					<p class="work-w3">Principal</p>
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><p class="number-w3">+01 543 338 96</p>
+					</div>
+					<div class="span-sub-w3ls">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">example@mail.com</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
 	</div>
-	<!-- //Team -->
+	<div class="contact-right-w3layouts">
+	<h5 class="title-w3">We Would Love To Hear From You!</h5>
+	<p class="head-w3-agileits">If you have any questions, please call us or fill in the form below and we will get back to you very soon.</p>
+		<form action="#" method="post">
+			<input type="text" name="your name" placeholder="YOUR NAME" required="">
+			<input type="email" name="your email" placeholder="YOUR EMAIL" required="">
+			<textarea name="your message" placeholder="YOUR MESSAGE" required=""></textarea>
+			<input type="submit" value="Send Message">
+		</form>
+	</div>
+	<div class="clearfix"> </div>
+	</div>
+	</div>
+</div>
+	<!-- //Mail Us inner -->
 <!-- footer -->
-
-<div class="about-agile inner-padding">
-	<div class="container">
-		<h3 class="heading-agileinfo black-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
-		<p style="color: black" >“Ideas shape the course of history as the pen is mightier than the sword.”</p>
-			<div class="more-button">
-				<a href="contact.html">Mail Us</a>
-			</div>
-	</div>
-</div>
 
 <div class="contact-w3ls ">
 <div class="contact-top-w3-agile">
@@ -248,7 +226,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
+		$(".scroll").click(function(event){		
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -263,9 +241,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear'
+			easingType: 'linear' 
 			};
-		*/
+		*/								
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>

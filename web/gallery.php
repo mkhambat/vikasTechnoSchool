@@ -5,6 +5,10 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
+<?php
+require 'essentials.php';
+$_SESSION['url'] = $_SERVER['REQUEST_URI'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,20 +16,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<title>VTS - Gallery</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" /> -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- // custom-theme -->
 <!--css links-->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-->
 <link href="css/font-awesome.css" rel="stylesheet"><!--font-awesome-->
-<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
+<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts--><!-- 
-<link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+<!--fonts-->
+<!-- <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
 </head>
@@ -50,33 +53,60 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<div class="contact-bnr-w3-agile">
 						<ul>
 							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
-							<!-- <li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	 -->
-						</ul>
-					</div>
-				</div>
-				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+							<?php
 
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.php">Home</a></li>
-						<li><a href="about.php">About</a></li>
-						<li><a href="admissions.html">Admissions</a></li>
-						<!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="gallery.php">View Gallery</a></li>
-								<li><a href="upload.php">Upload photos</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="codes.html">Short Codes</a></li>
-								<li><a href="icons.html">Icons</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+							if(loggedin()){
+								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+								echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+
+							}
+							else{
+									echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+								}
+							?>
+						</ul>
+							</div>
+							</div>
+					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+
+						<ul class="nav navbar-nav ">
+							<li><a href="index.php">Home</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="admissions.php">Admissions</a></li>
+							<li><a href="events.php">Events</a></li>
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+
+									<li><a href="gallery.php" class="active">View Gallery</a></li>
+									<?php
+									if(loggedin()) {
+
+
+									echo'<li><a href="upload.php">Upload photos</a></li>';
+								}
+									?>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="view-courses.php">View Courses</a></li>
+									<?php
+									if(loggedin()) {
+									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+								}
+								?>
+								</ul>
+							</li>
+							<li><a href="contact.php">Contact</a></li>
+							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+								echo'<li><a href="admin.php">Admin Panel</a></li>';
+
+							}
+							 ?>
+						</ul>
 
 				</div>
 				<div class="clearfix"> </div>	

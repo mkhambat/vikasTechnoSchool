@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							}
 							else{
-									echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+									echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 								}
 							?>
 						</ul>
@@ -65,8 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav ">
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="admissions.html">Admissions</a></li>
-							<li><a href="events.html">Events</a></li>
+							<li><a href="admissions.php">Admissions</a></li>
+							<li><a href="events.php">Events</a></li>
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								?>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.php">Contact</a></li>
 							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
 								echo'<li><a href="admin.php">Admin Panel</a></li>';
 
@@ -458,18 +458,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
 			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
 			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
-			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
 		</ul>
 			<div class="clearfix"></div>
 		<div class="copy">
 				<ul class="banner-menu-w3layouts">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="services.html">Admissions</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="admissions.php">Admissions</a></li>
+					<li><a href="events.php">Events</a></li>
 
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="view-courses.php">Courses</a></li>
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 				<!-- <ul class="agileits_social_list">
 					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -505,7 +506,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										$('.events').append("<li>after event fired.</li>");
 										}
 										});
-										})
+										});
 			</script>
 <!-- <!- //responsiveslides -->
 <!-- OnScroll-Number-Increase-JavaScript -->
@@ -515,7 +516,7 @@ Scrolling-top -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
-	<!-- jQuery(document).ready(function($) {
+	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);

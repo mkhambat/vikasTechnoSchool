@@ -4,9 +4,9 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 ?>
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-<title>VTS - About</title>
+<title>VTS - Events</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,7 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- Header -->
-<div id="home" class="banner w3l">
+<div id="home" class="banner inner-banner-w3l">
 		<div class="header-nav">
 			<nav class="navbar navbar-default">
 			<div class="header-top">
@@ -44,9 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
-						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
-							<?php
+								<ul>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+									<!-- <li><i class="fa fa-phone" aria-hidden="true"></i>+91 86732 72023</li> -->	
+								<?php
 
 							if(loggedin()){
 								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
@@ -64,9 +65,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<ul class="nav navbar-nav ">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php" class="active" >About</a></li>
+							<li><a href="about.php" >About</a></li>
 							<li><a href="admissions.php">Admissions</a></li>
-							<li><a href="events.php">Events</a></li>
+							<li><a href="events.php" class="active" >Events</a></li>
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
@@ -102,108 +103,129 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</ul>
 
 					</div>
-					<div class="clearfix"> </div>
+					<div class="clearfix"> </div>	
 				</nav>
 							<div class="clearfix"> </div>
 		</div>
-	</div>
+</div>	
 <!-- //Header -->
-<!-- about inner -->
-<div class="about-bottom inner-padding">
-	<div class="container">
-	<h3 class="heading-agileinfo">About Us<span>Redefining School</span></h3>
-				<div class="about-bott-right">
-					 <h5>Who We Are</h5>
-					 <p>We are a Private school located in Andra Pradesh, the southern state of India. Currently, home to over 2000 students, we provides quality education and all-round development of students between the age of 5-18 years. Since our establishment in 2011, we have been the only major private sector school in the area. Employing 120 staffs and teachers, we has been a spearhead in providing quality education to students in Vissannapeta, Andra Pradesh. </p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-</div>
-
-
-
-<!-- //about inner -->
-<!-- Team -->
-<div class="team" id="team">
-		<div class="container">
-		<h3 class="heading-agileinfo">School Facilities<!-- <span>Quis autem vel eum iure reprehenderit</span> --></h3>
-			<div class="agile_team_grids">
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/_DSC0334.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Science Lab</h5>
-							<!-- <p></p> -->
-
-						</div>
+<!-- services inner -->
+<div class="agileinfo_services_grids inner-padding">
+<div class="container">
+<h3 class="heading-agileinfo">School Events<!-- <span>We are giving special services</span> --></h3>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-female" aria-hidden="true"></i> -->
+						<h4>Annual Sports Meet</h4>
+						<p>Every year students compete with other students in sports like Track and Field, March-Past, Cricket, Volleyball, Badminton, etc. These sports are held between various houses in a pirticular school. </p>
 					</div>
-					<h4>Science Lab</h4>
-					<!-- <p>Director</p> -->
 				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/School_Pictures_and_Report/DSC_3064.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Play room for pre-primary school</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-group" aria-hidden="true"></i> -->
+						<h4>Annual Day</h4>
+						<p>On this day every year, students get a chance to showcase their skills where, they stage various types of skits, dance and singing performances. </p>
+					</div>
+				</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+						<h4>Teacher Training Program</h4>
+						<p>Training programs and Spoken English classes for teachers and students are conducted on a regular basis.</p>
+					</div>
+				</div>
 
-						</div>
+
+
+
+				
+				<!-- <div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<i class="fa fa-group" aria-hidden="true"></i>
+						<h4>Social Programs</h4>
+						<p>Quisque consectetur, sem id sagittis sodales, augue diam consequat mi, 
+							sed suscipit turpis diam eget nisl.</p>
 					</div>
-					<h4>Play room for pre-primary school</h4>
-					<!-- <p>Pricipal</p> -->
 				</div>
-				<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="/vikasTechnoSchool/Some_more_school_images_and_info/11-new.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Computer Lab</h5>
-							<!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p> -->
-							<!-- <div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div> -->
-						</div>
+				<div class="col-md-4 agileinfo_services_grid">
+					<div class="agileinfo_services_grid1">
+						<i class="fa fa-trophy" aria-hidden="true"></i>
+						<h4>Special Olympics</h4>
+						<p>Quisque consectetur, sem id sagittis sodales, augue diam consequat mi, 
+							sed suscipit turpis diam eget nisl.</p>
 					</div>
-					<h4>Computer Lab</h4>
-					<!-- <p>Teacher</p> -->
-				</div>
-			<!-- 	<div class="col-md-3 agile_team_grid">
-					<div class="view view-sixth">
-						<img src="images/t4.jpg" alt=" " class="img-responsive">
-						<div class="mask">
-							<h5>Lorem Ipsum</h5>
-							<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
-							<div class="agileits_social_icons">
-								<ul class="agileits_social_list">
-									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<h4>Mary Winkler</h4>
-					<p>Teacher</p>
 				</div> -->
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //Team -->
-<!-- footer -->
-
-<div class="about-agile inner-padding">
-	<div class="container">
-		<h3 class="heading-agileinfo black-w3ls">Play, explore and learn.<span class="yellow-w3ls">Experience a good Education</span></h3>
-		<p style="color: black" >“Ideas shape the course of history as the pen is mightier than the sword.”</p>
-			<div class="more-button">
-				<a href="contact.html">Mail Us</a>
-			</div>
 	</div>
 </div>
+
+<div class="agileinfo_services_grids inner-padding">
+<div class="container">
+<h3 class="heading-agileinfo">Cultural Festivals<!-- <span>We are giving special services</span> --></h3>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Diwali</h4>
+			<p>The celebraton of Diwali, comes alive at Vikas techno School where the entire school wears a festive look with pots, diyas and lanterns adorning the reception and corridors of the school. Students talk about how good always conquers the evil and also about why and how Diwali is celebrated across the country.</p>
+		</div>
+	</div>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Ganesh Chaturthi</h4>
+			<p>Students celebrate Ganesh Chaturthi with great pomp and gaiety. The session usually starts with a traditional lamp lighting and aarthi. Children showcase dances, songs and skits depicting the importance of Lord Vinayaka.</p>
+		</div>
+	</div>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Pongal</h4>
+			<p>Pongal celebration starts with guru pooja followed by colourful presentations of cultural programms by students. It includes, traditional dance, poems, songs and games.</p>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<div class="agileinfo_services_grids inner-padding">
+<div class="container">
+<h3 class="heading-agileinfo">National Festivals<!-- <span>We are giving special services</span> --></h3>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Independence Day</h4>
+			<p>Indepencence day is celebrated at Vikas Techno School with gratitude and sacrifice of freedom fighters. The celebration begins in school premises with the unfurling of the National Flag followed by a speech with patriotic zeal and fervour by the Principal.</p>
+		</div>
+	</div>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Republic Day</h4>
+			<p>Republic Day is celebrated by staff and students with patriotic fervour. After hoisting the National flag the pricipal speaks about the sanctity of the occasion and role played by the Constitutional makers.</p>
+		</div>
+	</div>
+
+	<div class="col-md-4 agileinfo_services_grid">
+		<div class="agileinfo_services_grid1">
+			<!-- <i class="fa fa-paint-brush" aria-hidden="true"></i> -->
+			<h4>Children's Day</h4>
+			<p>Teachers and children remember Pandit Jawarharlal Nehru, our first Prime Minister, and celebrate the love he had for all children with a host of fun-filled activities and delicious food. </p>
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+
+
+	<!-- //services inner -->
+<!-- footer -->
 
 <div class="contact-w3ls ">
 <div class="contact-top-w3-agile">
@@ -212,9 +234,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
 			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
-			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br></li>
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
 		</ul>
 			<div class="clearfix"></div>
 		<div class="copy">
@@ -224,7 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="admissions.php">Admissions</a></li>
 					<li><a href="events.php">Events</a></li>
 
-					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="view-courses.php">Courses</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
@@ -248,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
+		$(".scroll").click(function(event){		
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -263,9 +285,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear'
+			easingType: 'linear' 
 			};
-		*/
+		*/								
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>

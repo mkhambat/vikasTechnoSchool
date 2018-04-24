@@ -4,6 +4,12 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
+<?php
+require 'essentials.php';
+$_SESSION['url'] = $_SERVER['REQUEST_URI'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,29 +51,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
-								<ul>
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
-									<li><i class="fa fa-phone" aria-hidden="true"></i>+91 86732 72023</li>	
-								</ul>
+						<ul>
+							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+							<?php
+
+							if(loggedin()){
+								echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+								echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+
+							}
+							else{
+									echo '<li style="padding-left:700px; margin-top: -50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+								}
+							?>
+						</ul>
 							</div>
 							</div>
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
-						<ul class="nav navbar-nav">
+						<ul class="nav navbar-nav ">
 							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="services.html" class="active">Admissions</a></li>
-							<li><a href="events.html">Events</a></li>
-							
-							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="admissions.php" class="active">Admissions</a></li>
+							<li><a href="events.php">Events</a></li>
+
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="codes.html">Short Codes</a></li>
-									<li><a href="icons.html">Icons</a></li>
+
+									<li><a href="gallery.php">View Gallery</a></li>
+									<?php
+									if(loggedin()) {
+
+
+									echo'<li><a href="upload.php">Upload photos</a></li>';
+								}
+									?>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="view-courses.php">View Courses</a></li>
+									<?php
+									if(loggedin()) {
+									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+								}
+								?>
+								</ul>
+							</li>
+							<li><a href="contact.php">Contact</a></li>
+							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+								echo'<li><a href="admin.php">Admin Panel</a></li>';
+
+							}
+							 ?>
 						</ul>
 
 					</div>
@@ -138,20 +176,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
 			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br></li>
-			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
 		</ul>
 			<div class="clearfix"></div>
 		<div class="copy">
 				<ul class="banner-menu-w3layouts">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="services.html">Admissions</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="admissions.php">Admissions</a></li>
+					<li><a href="events.php">Events</a></li>
 
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="view-courses.php">Courses</a></li>
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 				<!-- <ul class="agileits_social_list">
 					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
