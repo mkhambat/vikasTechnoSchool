@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
 
-				require 'connect.inc.php';
+				require 'essentials.php';
 ?>
 
 
@@ -17,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -28,7 +28,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/lightcase.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts--><!-- 
+<!--fonts--><!--
 <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
@@ -47,62 +47,78 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<span class="icon-bar"></span>
 						</button>
 						<h1>
-							<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Emphasize</a>
+							<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 						</h1>
+			</div>
+			<!-- navbar-header -->
+			<div class="contact-bnr-w3-agile">
+				<ul>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+					<?php
+
+					if(loggedin()){
+						echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+						echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+
+					}
+					else{
+							echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+						}
+					?>
+				</ul>
 					</div>
-					<!-- navbar-header -->
-					<div class="contact-bnr-w3-agile">
-						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	
+					</div>
+			<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav ">
+					<li><a href="index.php" class="active">Home</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="admissions.html">Admissions</a></li>
+					<li><a href="events.html">Events</a></li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							<li><a href="gallery.php">View Gallery</a></li>
+							<?php
+							if(loggedin()) {
+
+
+							echo'<li><a href="upload.php">Upload photos</a></li>';
+						}
+							?>
 						</ul>
-					</div>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="view-courses.php">View Courses</a></li>
+							<?php
+							if(loggedin()) {
+							echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+						}
+						?>
+						</ul>
 				</div>
-				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
-
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
-						<!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="gallery.php">View Gallery</a></li>
-								<li><a href="upload.php">Upload photos</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="upload-course.php">Upload Syllabus</a></li>
-								<li><a href="icons.html">Icons</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="codes.html">Short Codes</a></li>
-								<li><a href="icons.html">Icons</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-
-				</div>
-				<div class="clearfix"> </div>	
+				<div class="clearfix"> </div>
 			</nav>
 			<div class="clearfix"> </div>
 		</div>
-	</div>	
+	</div>
 	<!-- //Header -->
 	<!-- gallery inner -->
-	<div class="inner-padding">
+	<!-- <div class="inner-padding"> -->
 
-		
 
-		<div class="container">
-			<h3 class="heading-agileinfo">Courses</h3>
+
+		<!-- <div class="container">
+
+			<h3 class="heading-agileinfo">Courses</h3> -->
+			<div class="container" style="padding-top:20px">
+			<div class-"row">
+				<div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+					<h2 class="form-signin-heading" align="center">Course Syllabus</h2>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
@@ -110,22 +126,61 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
 				<?php
-				
-				$query = mysqli_query($con,"SELECT * FROM courses");
-				while ( $row = mysqli_fetch_array($query)) {
-				echo '<a href="'.$row['file_path'].'">'.$row['course_name'].'</a>'	;			
+				echo '<form action="view-courses.php"  style="padding-top:20px" method="post">
+				<table border= 1 width=400>
+        <tr>
+
+        <th class="text-center">Class</th>
+        <th class="text-center">Course Name</th>
+        <th class="text-center">File</th>';
+				if (loggedin()){
+				echo '<th>Select</th>';
 				}
 
-					
-			?>
+        echo'</tr>';
 
+				$query = mysqli_query($con,"SELECT * FROM courses");
+				while ( $row = mysqli_fetch_array($query)) {
+
+					$link= $row['Division']."_" .$row['course_name'];
+					$CourseID=$row['CourseID'];
+
+				echo '<tr><td align="center">'.$row['Division'].'</td><td align="center">'.$row['course_name'].'</td><td align="center"><a href="'.$row['file_path'].'">'.$link.'</a></td>'	;
+				if (loggedin()){
+				echo'<td align="center"><input type="checkbox" name="CourseID[]" class= case value='.$CourseID.' /></td>';
+				}
+			}
+					echo '</tr></table>';
+					echo '<br>';
+					if (loggedin()){
+					echo '<input type="submit" value="Delete Courses" id="buttonClass">';
+				}
+					echo '</form>';
+
+					if(isset($_POST['CourseID']) ){
+
+ 	 	        foreach($_POST['CourseID'] as $val){
+ 	 					// // 	echo $val;
+ 	 	        	$id_c = $val;
+ 	 						#echo $id_c;
+ 	 	          $query2 = "DELETE FROM `courses` where CourseID='".$id_c."'";
+ 	 	          $result2 = mysqli_query($con,$query2);
+ 	 	          if($result2 === false) {
+ 	 	        		die(mysql_error());
+ 	 	        	}
+ 	 	        echo "Course ID " .$id_c. " is deleted. <br>";
+ 	 					header("refresh:2; url=view-courses.php");
+ 	 	        }
+ 	 	    }
+			?>
+		</div>
+	</div>
+	</div>
 
 
 			<!-- </div> -->
 			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
+
 <!-- //gallery inner -->
 <!-- footer -->
 
@@ -176,7 +231,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -191,9 +246,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-			*/								
+			*/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
@@ -202,4 +257,3 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>
-

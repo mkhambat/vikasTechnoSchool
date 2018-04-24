@@ -5,7 +5,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
-
+<?php
+require 'essentials.php';
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -25,7 +27,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/lightcase.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts--><!-- 
+<!--fonts--><!--
 <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
@@ -44,102 +46,156 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<span class="icon-bar"></span>
 						</button>
 						<h1>
-							<a class="navbar-brand" href="index.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Emphasize</a>
+							<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
 						</h1>
+			</div>
+			<!-- navbar-header -->
+			<div class="contact-bnr-w3-agile">
+				<ul>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+					<?php
+
+					if(loggedin()){
+						echo '<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="logout.php">Logout</a></li>';
+						echo'<li><i class="fa fa-user" aria-hidden="true"></i>'.$result.'</a></li>';
+
+					}
+					else{
+							echo '<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+						}
+					?>
+				</ul>
 					</div>
-					<!-- navbar-header -->
-					<div class="contact-bnr-w3-agile">
-						<ul>
-							<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+1 (100)222-0-33</li>	
+					</div>
+			<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav ">
+					<li><a href="index.php" class="active">Home</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="admissions.html">Admissions</a></li>
+					<li><a href="events.html">Events</a></li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							<li><a href="gallery.php">View Gallery</a></li>
+							<?php
+							if(loggedin()) {
+
+
+							echo'<li><a href="upload.php">Upload photos</a></li>';
+						}
+							?>
 						</ul>
-					</div>
-				</div>
-				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="view-courses.php">View Courses</a></li>
+							<?php
+							if(loggedin()) {
+							echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
+						}
+						?>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+						echo'<li><a href="admin.php">Admin Panel</a></li>';
 
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
-						<!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="gallery.php">View Gallery</a></li>
-								<li><a href="upload.php">Upload photos</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="upload-course.php">Upload Syllabus</a></li>
-								<li><a href="view-courses.php">View Courses</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="codes.html">Short Codes</a></li>
-								<li><a href="icons.html">Icons</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+					}
+					 ?>
+				</ul>
 
 				</div>
-				<div class="clearfix"> </div>	
+				<div class="clearfix"> </div>
 			</nav>
 			<div class="clearfix"> </div>
 		</div>
-	</div>	
+	</div>
 	<!-- //Header -->
 	<!-- gallery inner -->
-	<div class="inner-padding">
 
-		
 
-		<div class="container">
-			<h3 class="heading-agileinfo">Upload Course Syllabus</h3>
+
+
+			<div class="container" style="padding-top:20px">
+	    <div class-"row">
+	      <div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
+			<!-- <h3 class="heading-agileinfo">Upload Course Syllabus</h3> -->
+			  <h2 class="form-signin-heading" align="center">Upload Course Syllabus</h2>
 		<!-- 	<div class="w3ls_portfolio_grids"> -->
 				<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 					Select image to upload:
 					<input type="file" name="fileToUpload" id="fileToUpload">
 					<input type="submit" value="Upload Image" name="submit">
 				</form> -->
-				<form action="upload-course.php" method="post" enctype="multipart/form-data">
-					<table align="center">
-					<tr>
-						<td><input type="text" name="coursename" placeholder="Course Name"></td>
-					</tr>
-						<tr>
-							<td><!-- <input type="file" name="files[]" multiple/> --><input type="file" name="fileToUpload" id="fileToUpload"></td>
-							
+				<form action="upload-course.php"  style="padding-top:20px" method="post" enctype="multipart/form-data">
+					<!-- <table align="center"> -->
+						<div class="form-group" style="width:40%">
+  					<label for="division">Select Class:</label>
+  					<select class="form-control" name="division">
+    				<option value="I">I</option>
+    				<option value="II">II</option>
+    				<option value="III">III</option>
+    				<option value="IV">IV</option>
+						<option value="V">V</option>
+						<option value="VI">VI</option>
+						<option value="VII">VII</option>
+						<option value="VIII">VIII</option>
+						<option value="IX">IX</option>
+						<option value="X">X</option>
+
+  					</select>
+					</div>
+						<!-- <tr>
+							<td><input type="text" name="division" placeholder="Class"></td>
 						</tr>
-						<tr>
-							<td  ><input type="submit" value="Upload Course" name="submit" id="submit"/></td>
-						</tr>
-					</table>
+					<tr> -->
+					<div class="form-group">
+  				<label for="coursename">Coursname:</label>
+  				<input style="background: #ffffff;width:80%" type="text" class="form-control" name="coursename">
+					</div>
+						<!-- <td><input type="text" name="coursename" placeholder="Course Name"></td>
+					</tr> -->
+						<!-- <tr>
+							<td> -->
+								<!-- <input type="file" name="files[]" multiple/> -->
+								<div class="form-group">
+									<label for="fileToUpload">File:</label>
+								<input type="file" name="fileToUpload" id="fileToUpload"></td>
+							</div>
+
+						<div class="form-group">
+
+						<input type="submit" value="Upload Course" name="submit" id="submit"/></td>
+					</div>
+
 				</form>
+
 
 				<?php
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
+
+	$divison = $_POST['division'];
 	$target_dir = "courses/";
 	$coursename = $_POST['coursename'];
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	//$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	$file_type = $_FILES['fileToUpload']['type'];
-	echo "this.".$file_type;
+	// echo "this.".$file_type;
 
 if ($file_type=="application/pdf") {
 
  if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file))
 
  {
- 	require 'connect.inc.php';
-	$sql= "INSERT INTO courses(course_name,file_path) VALUES('$coursename','$target_file')";
+
+	$sql= "INSERT INTO courses(Division,course_name,file_path) VALUES('$divison','$coursename','$target_file')";
   mysqli_query($con,$sql);
   echo 'inserted';
  echo "The file ". basename( $_FILES['fileToUpload']['name']). " is uploaded";
@@ -200,7 +256,9 @@ else {
 }*/
 }
 ?>
-
+</div>
+</div>
+</div>
 
 
 			<!-- </div> -->
@@ -258,7 +316,7 @@ else {
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -273,9 +331,9 @@ else {
 			containerID: 'toTop', // fading element id
 			containerHoverID: 'toTopHover', // fading element hover id
 			scrollSpeed: 1200,
-			easingType: 'linear' 
+			easingType: 'linear'
 			};
-			*/								
+			*/
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
@@ -284,4 +342,3 @@ else {
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>
-

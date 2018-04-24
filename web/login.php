@@ -1,14 +1,16 @@
 <?php
-
 require 'connect.inc.php';
 require 'session.php';
 require 'check_login.php';
-
 if(loggedin()){
-header('Location:trial.php');
+  if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+    header('Location:admin.php');
+  }
+  else{
+      header('Location:index.php');
+  }
+
 }
-
-
 if (isset($_POST['username'])&&isset($_POST['password']))
 {
   if(!empty($_POST['username'])&&!empty($_POST['password']))
@@ -16,11 +18,10 @@ if (isset($_POST['username'])&&isset($_POST['password']))
   $name=$_POST['username'];
   $password=$_POST['password'];
   $password_hash=md5($password);
-  $query= "SELECT `EmpID` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
-
+  $query= "SELECT `EmpID`, `Admin_Status`,`Approved_status` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
+  #echo $query;
   }
 }
-
  ?>
 
 <!DOCTYPE html>
@@ -51,6 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- Header -->
 <div id="home" class="banner w3l">
+  <div class="banner inner-banner-w3l">
 		<div class="header-nav">
 			<nav class="navbar navbar-default">
 			<div class="header-top">
@@ -68,10 +70,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- navbar-header -->
 					<div class="contact-bnr-w3-agile">
 								<ul>
-									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
 									<?php
 									 ?>
-									<li style="padding-left:580px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+									<li style="padding-left:700px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
 								</ul>
 							</div>
 
@@ -98,8 +100,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</nav>
 							<div class="clearfix"> </div>
 		</div>
-
-		<div class="container" style="padding-top:80px">
+  </div>
+		<div class="container" style="padding-top:20px">
     <div class-"row">
       <div class="col-md-6" style="color:#2e2b2c; float : none; margin:0 auto; width:40%">
         <h2 class="form-signin-heading" align="center">Login here!</h2>
@@ -130,17 +132,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										{
 											#$user_id=mysqli_result($query_run,0,'EmpID');
 											$row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
-											$_SESSION['EmpID']=$row['EmpID'];
-											if(isset($_SESSION['url'])) {
-												$url = $_SESSION['url'];
-												echo $url;
-											}
+                      if($row['Approved_status'] !='Yes' ) {
+                        echo "<h4>Admin approval pending. Try Again Later.</h4>";
+                      }
+                    else{
 
-											else{
-												$url = "trial.php";
+
+											$_SESSION['EmpID']=$row['EmpID'];
+                      // echo $row['EmpID'];
+                      $_SESSION['Admin_Status']=$row['Admin_Status'];
+                      #echo $row['Admin_Status'];
+											if(isset($_SESSION['url']) && empty($row['Admin_Status']) ) {
+												$url = $_SESSION['url'];
+												#echo "fuvk";
 											}
+											elseif ($row['Admin_Status']=="Yes") {
+                          #echo 'yes';
+                        	$url = "admin.php";
+                      }
+                      else{
+                        $url = "index.php";
+
+                      }
+                      #echo $url;
 											header('Location:'.$url);
 										}
+                  }
 									}
 								}
 						?>
@@ -149,8 +166,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 	</div>
 </div>
-
 </div>
+
 
 </body>
 </html>

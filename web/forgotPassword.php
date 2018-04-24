@@ -79,15 +79,42 @@
 <?php
 
 //start session
-   
+
+require 'connect.inc.php';
+require 'essentials.php';
+   $error = 0;
     if(isset($_POST['forgotSubmit'])){
     //check whether email is empty
       if(!empty($_POST['email'])){
-        
-        
+        $to = $_POST['email'];   
+        echo "emial". $to;     
+        $sql= "select * from registeration where Email = '$to'";
+           if($query_run=mysqli_query($con,$sql))
+                  {
+                    $query_num_rows=mysqli_num_rows($query_run);
+                    if($query_num_rows==0){
+                       $sessData['status']['type'] = 'error';
+                       $sessData['status']['msg'] = 'Email does not exist!';
+                       $error = 1;
+                    }else{
+                    
+                    $row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+
+                  }
+          }else{
+              $sessData['status']['type'] = 'error';
+              $sessData['status']['msg'] = 'Some problem occured!';
+              $error = 1;
+          }
+
+          echo "error". $error;
+        if($error == 0){
         $uniqidStr = md5(uniqid(mt_rand()));
         $resetPassLink = 'http://localhost/vikasTechnoSchool/web/resetpassword.php?fp_code='.$uniqidStr;
-
+        $empId = $row['EmpID'];
+        echo "empId".$empId;
+        $sql1 = "UPDATE registeration set U_Str = '$uniqidStr' where EmpID = '$empId' ";           
+        mysqli_query($con,$sql1))
         $to = $_POST['email'];
         $subject = "Password Update Request";
         $mailContent = 'Dear, 
@@ -116,6 +143,7 @@
         $sessData['status']['msg'] = 'Please check your e-mail, we have sent a password reset link to your registered email.';
         $statusMsg = $sessData['status']['msg'];
         $statusMsgType = $sessData['status']['type'];
+      }
       }else{
         $sessData['status']['type'] = 'error';
         $sessData['status']['msg'] = 'Some problem occurred, please try again.';

@@ -79,17 +79,25 @@
 <?php
 
 //start session
+require 'connect.inc.php';
+require 'essentials.php';
+
 
 if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_POST['fp_code'])){
     
+
+     $fp_code = $_POST['fp_code'];
     if($_POST['password'] !== $_POST['confirm_password']){
             $sessData['status']['type'] = 'error';
             $sessData['status']['msg'] = 'Confirm password must match with the password.'; 
         }else{
 
-          require 'connect.inc.php';
-           $sql= "select * from registeration where ";
-  mysqli_query($con,$sql);
+           $sql= "select * from registeration where 'U_Str' = '$fp_code'";
+           if($query_run=mysqli_query($con,$query))
+                  {
+                    $query_num_rows=mysqli_num_rows($query_run);
+                    $row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);           
+                  }
         }
    
       ?>
