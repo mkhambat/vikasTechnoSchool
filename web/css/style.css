@@ -1283,7 +1283,7 @@ figure img {
 }
 .view,.view .mask,.view .content{
 	width: 255px;
-    height: 298px;
+    /*height: 298px;*/
 }
 .view .mask,.view .content {
    position: absolute;
