@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							}
 							else{
-									echo '<li style="padding-left:700px; margin-top: -50px" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+									echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 								}
 							?>
 						</ul>
@@ -506,7 +506,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										$('.events').append("<li>after event fired.</li>");
 										}
 										});
-										})
+										});
 			</script>
 <!-- <!- //responsiveslides -->
 <!-- OnScroll-Number-Increase-JavaScript -->
@@ -516,7 +516,7 @@ Scrolling-top -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
-	<!-- jQuery(document).ready(function($) {
+	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);

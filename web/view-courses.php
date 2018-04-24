@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					}
 					else{
-							echo '<li style="padding-left:700px; margin-top: -50px"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+							echo '<li style="padding-left:700px; margin-top: -50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
 						}
 					?>
 				</ul>
