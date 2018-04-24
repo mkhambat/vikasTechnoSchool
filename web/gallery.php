@@ -16,19 +16,20 @@ $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 	<title>VTS - Gallery</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" /> -->
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- // custom-theme -->
 <!--css links-->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-->
 <link href="css/font-awesome.css" rel="stylesheet"><!--font-awesome-->
-<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
+<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 <!--//css links-->
-<!--fonts-->
-<!-- <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+<!--fonts--><!-- 
+<link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"> -->
 <!--//fonts-->
 </head>
@@ -65,18 +66,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								}
 							?>
 						</ul>
-							</div>
-							</div>
-					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+					</div>
+				</div>
+				<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
 
-						<ul class="nav navbar-nav ">
-							<li><a href="index.php">Home</a></li>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.php">Home</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="admissions.php">Admissions</a></li>
 							<li><a href="events.php">Events</a></li>
 
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 
 									<li><a href="gallery.php" class="active">View Gallery</a></li>
@@ -181,27 +182,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
 		<ul class="w3_address">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India.</span></li>
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
 			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span> --></li>
-			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.html">Contact >></a></span></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
 		</ul>
-		<div class="clearfix"></div>
+			<div class="clearfix"></div>
 		<div class="copy">
-			<ul class="banner-menu-w3layouts">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="admissions.html">Services</a></li>
-				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<!-- <ul class="agileits_social_list">
-				<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-			</ul> -->
-			<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+				<ul class="banner-menu-w3layouts">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="admissions.php">Admissions</a></li>
+					<li><a href="events.php">Events</a></li>
+
+					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="view-courses.php">Courses</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+				<!-- <ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul> -->
+				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 		</div>
 	</div>
 </div>
