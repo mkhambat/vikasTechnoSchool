@@ -1,3 +1,5 @@
+
+
 <?php
 require 'connect.inc.php';
 require 'session.php';
@@ -49,33 +51,33 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 	<!--//fonts-->
 </head>
 <body>
-	<!-- Header -->
-	<div id="home" class="banner w3l">
-		<div class="banner inner-banner-w3l">
-			<div class="header-nav">
-				<nav class="navbar navbar-default">
-					<div class="header-top">
-						<div class="navbar-header logo">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<h1>
-								<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
-							</h1>
-						</div>
-						<!-- navbar-header -->
-						<div class="contact-bnr-w3-agile">
-							<ul>
-								<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
-								<?php
-
-								?>
-								<li style="padding-left:700px; margin-top:-50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
-							</ul>
-						</div>
+<!-- Header -->
+<div id="home" class="banner w3l">
+  <div class="banner inner-banner-w3l">
+		<div class="header-nav">
+			<nav class="navbar navbar-default">
+			<div class="header-top">
+					<div class="navbar-header logo">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<h1>
+									<a class="navbar-brand" href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Vikas Techno School</a>
+								</h1>
+					</div>
+					<!-- navbar-header -->
+					<div class="contact-bnr-w3-agile">
+								<ul>
+									<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a></li>
+									<?php
+										
+									 ?>
+									<li style="padding-left:700px; margin-top:-50px; display: block"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php" >Login</a></li>
+								</ul>
+							</div>
 
 					</div>
 					<div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
@@ -216,7 +218,6 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
 				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> --> </p>
-			</div>
 		</div>
 	</div>
 

@@ -185,5 +185,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </div>
 
+<div class="contact-w3ls ">
+<div class="contact-top-w3-agile">
+</div>
+	<div class="container">
+		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
+		<ul class="w3_address">
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
+			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
+			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
+		</ul>
+			<div class="clearfix"></div>
+		<div class="copy">
+				<ul class="banner-menu-w3layouts">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About</a></li>
+					<li><a href="admissions.php">Admissions</a></li>
+					<li><a href="events.php">Events</a></li>
+
+					<li><a href="gallery.php">Gallery</a></li>
+					<li><a href="view-courses.php">Courses</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+				<!-- <ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul> -->
+				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved.  | Design by <a href="http://w3layouts.com/">W3layouts</a>  --></p>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

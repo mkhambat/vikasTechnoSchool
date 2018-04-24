@@ -1272,6 +1272,7 @@ figure img {
     color: #999;
     font-size: 15px;
     letter-spacing: 0.5px;
+
 }
 .agile_team_grid {
     text-align: center;
@@ -1285,7 +1286,7 @@ figure img {
 }
 .view,.view .mask,.view .content{
 	width: 255px;
-    height: 298px;
+    height: 170px;
 }
 .view .mask,.view .content {
    position: absolute;
