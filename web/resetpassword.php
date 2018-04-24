@@ -88,17 +88,24 @@ if(!empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_
 
      $fp_code = $_POST['fp_code'];
     if($_POST['password'] !== $_POST['confirm_password']){
-            $sessData['status']['type'] = 'error';
-            $sessData['status']['msg'] = 'Confirm password must match with the password.'; 
+            $statusMsgType = 'error';
+            $statusMsg = 'Confirm password must match with the password.'; 
         }else{
-
-           $sql= "select * from registeration where 'U_Str' = '$fp_code'";
-           if($query_run=mysqli_query($con,$query))
+           $pass = md5($_POST['password']); 
+           $sql= "select * from registeration where U_Str = '$fp_code'";
+           if($query_run=mysqli_query($con,$sql))
                   {
                     $query_num_rows=mysqli_num_rows($query_run);
-                    $row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);           
+                    $row= mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+                    $empId = $row['EmpID'];
+                    $sql1 = "Update registeration set Password = '$pass'  where EmpID = '$empId'";
+                    mysqli_query($con,$sql1);     
+                    $statusMsgType = 'sucess';
+                   $statusMsg = 'Password successfully changed.';       
                   }
+
         }
+      }
    
       ?>
 

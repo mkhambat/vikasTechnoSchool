@@ -1,27 +1,3 @@
-<?php
-require 'connect.inc.php';
-require 'session.php';
-require 'check_login.php';
-if(loggedin()){
-	if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-		header('Location:admin.php');
-	}
-	else{
-		header('Location:index.php');
-	}
-}
-if (isset($_POST['username'])&&isset($_POST['password']))
-{
-	if(!empty($_POST['username'])&&!empty($_POST['password']))
-	{
-		$name=$_POST['username'];
-		$password=$_POST['password'];
-		$password_hash=md5($password);
-		$query= "SELECT `EmpID`, `Admin_Status`,`Approved_status` FROM `registeration` WHERE `Email`='$name' AND `Password`='$password_hash' LIMIT 0, 30 ";
-  #echo $query;
-	}
-}
-?>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -41,6 +17,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 	<!--css links-->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!--bootstrap-->
 	<link href="css/font-awesome.css" rel="stylesheet"><!--font-awesome-->
+	<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--stylesheet-->
 	<!--//css links-->
 	<!--fonts-->
@@ -91,29 +68,16 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 								<ul class="dropdown-menu">
 
 									<li><a href="gallery.php">View Gallery</a></li>
-									<?php
-									if(loggedin()) {
-										echo'<li><a href="upload.php">Upload photos</a></li>';
-									}
-									?>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="view-courses.php">View Courses</a></li>
-									<?php
-									if(loggedin()) {
-										echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
-									}
-									?>
 								</ul>
 							</li>
 							<li><a href="contact.php">Contact</a></li>
-							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
-							}
-							?>
+							
 						</ul>
 
 					</div>
@@ -140,6 +104,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 						</div>
 						<div class="invalid" style="padding-top:10px">
 							<?php
+							require 'conncetion.inc.php';
 							if (isset($_POST['username'])&&isset($_POST['password'])&&isset($query))
 							{
 								if($query_run=mysqli_query($con,$query))
@@ -157,6 +122,8 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 											echo "<h4>Admin approval pending. Try Again Later.</h4>";
 										}
 										else{
+
+
 											$_SESSION['EmpID']=$row['EmpID'];
                       // echo $row['EmpID'];
 											$_SESSION['Admin_Status']=$row['Admin_Status'];
@@ -171,6 +138,7 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 											}
 											else{
 												$url = "index.php";
+
 											}
                       #echo $url;
 											header('Location:'.$url);
@@ -215,52 +183,10 @@ if (isset($_POST['username'])&&isset($_POST['password']))
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
-				<p>© 2018 Vikas Techno School .<!--  All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> --> </p>
+				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 			</div>
 		</div>
 	</div>
-
-	!--//footer -->
-	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<!--//js -->
-	<!-- light-case -->
-	<script src="js/lightcase.js"></script>
-	<script src="js/jquery.events.touch.js"></script>
-	<script>
-		$('.showcase').lightcase();
-	</script>
-	<!-- //light-case -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!--Scrolling-top -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-	</script>
-	<!--//Scrolling-top -->
-	<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-			*/								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<!-- //smooth scrolling -->
-	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 
 
 </body>

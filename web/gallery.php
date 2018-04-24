@@ -62,8 +62,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							}
 							else{
-									echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
-								}
+								echo '<li style="padding-left:700px; margin-top: -50px; display: block" ><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php">Login</a></li>';
+							}
 							?>
 						</ul>
 					</div>
@@ -72,42 +72,42 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="admissions.php">Admissions</a></li>
-							<li><a href="events.php">Events</a></li>
+						<li><a href="about.php">About</a></li>
+						<li><a href="admissions.php">Admissions</a></li>
+						<li><a href="events.php">Events</a></li>
 
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-								<ul class="dropdown-menu">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+							<ul class="dropdown-menu">
 
-									<li><a href="gallery.php" class="active">View Gallery</a></li>
-									<?php
-									if(loggedin()) {
+								<li><a href="gallery.php" class="active">View Gallery</a></li>
+								<?php
+								if(loggedin()) {
 
 
 									echo'<li><a href="upload.php">Upload photos</a></li>';
 								}
-									?>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="view-courses.php">View Courses</a></li>
-									<?php
-									if(loggedin()) {
+								?>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="view-courses.php">View Courses</a></li>
+								<?php
+								if(loggedin()) {
 									echo '<li><a href="upload-course.php">Upload Syllabus</a></li>';
 								}
 								?>
-								</ul>
-							</li>
-							<li><a href="contact.php">Contact</a></li>
-							<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
-								echo'<li><a href="admin.php">Admin Panel</a></li>';
+							</ul>
+						</li>
+						<li><a href="contact.php">Contact</a></li>
+						<?php if(isset($_SESSION['Admin_Status']) && $_SESSION['Admin_Status']=='Yes' ){
+							echo'<li><a href="admin.php">Admin Panel</a></li>';
 
-							}
-							 ?>
-						</ul>
+						}
+						?>
+					</ul>
 
 				</div>
 				<div class="clearfix"> </div>	
@@ -125,70 +125,70 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				
 
 
-					<?php
-					$directory = "images/";
-					$images = glob($directory . "*.{jpg,jpeg,JPG}",GLOB_BRACE);
-					$imageCount = 0;
-					foreach($images as $image)
-					{
-						++$imageCount;
-						if($imageCount == 1){
+				<?php
+				$directory = "images/";
+				$images = glob($directory . "*.{jpg,jpeg,JPG}",GLOB_BRACE);
+				$imageCount = 0;
+				foreach($images as $image)
+				{
+					++$imageCount;
+					if($imageCount == 1){
 						?>
 
 
 						<div class="row" style="display: table;">
-  	
-						<?php  } ?>
+							
+							<?php  } ?>
 
-						<div class="column" style="width: 33.33%;float: left; width: 33.33%; padding: 5px;">
-						   
-							<a href="<?php echo $image?>" class="showcase" data-rel="lightcase:myCollection:slideshow" title="VTS">
-								<div class="agileits_portfolio_sub_grid agileits_w3layouts_team_grid">	
-									<div class="w3layouts_port_head">
-										<h3>VTS</h3>
+							<div class="column" style="width: 33.33%;float: left; width: 33.33%; padding: 5px;">
+								
+								<a href="<?php echo $image?>" class="showcase" data-rel="lightcase:myCollection:slideshow" title="VTS">
+									<div class="agileits_portfolio_sub_grid agileits_w3layouts_team_grid">	
+										<div class="w3layouts_port_head">
+											<h3>VTS</h3>
+										</div>
+										<img src="<?php echo $image?>" alt="Fjords"  height="300!important" width="450">
 									</div>
-									<img src="<?php echo $image?>" alt="Fjords"  height="300!important" width="450">
-								</div>
-							</a>
+								</a>
 
 
 
-						  </div>
- 					<?php
-					if($imageCount == 3){
-						$imageCount = 0;
-						?>
-	
-					</div>	
+							</div>
+							<?php
+							if($imageCount == 3){
+								$imageCount = 0;
+								?>
+								
+							</div>	
 
-					<?php
-					}
-				}	
+							<?php
+						}
+					}	
 
-				?>
-				
+					?>
+					
 
+				</div>
+				<div class="clearfix"> </div>
 			</div>
-			<div class="clearfix"> </div>
 		</div>
 	</div>
-</div>
-<!-- //gallery inner -->
-<!-- footer -->
+	<!-- //gallery inner -->
+	<!-- footer -->
 
-<div class="contact-w3ls ">
-	<div class="contact-top-w3-agile">
-	</div>
-	<div class="container">
-		<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
-		<ul class="w3_address">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
-			<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
-			<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
-		</ul>
+	<div class="contact-w3ls ">
+		<div class="contact-top-w3-agile">
+		</div>
+		<div class="container">
+			<h2 class="heading-agileinfo white-w3ls">Contact Us<span class="black-w3ls">Welcome to our school. We are glad to have you around.</span></h2>
+			<ul class="w3_address">
+				<li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Vissannapetaa, Andhra Pradesh 521215, India</span></li>
+				<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>+91 86732 72023<br><!-- +1567 567 234</span> --></li>
+				<li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:vtsiit2011@gmail.com">vtsiit2011@gmail.com</a><br><!-- <a href="mailto:info@example.com">info@example2.com</a></span></li> -->
+				<li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="contact.php">Contact >></a></span></li>
+			</ul>
 			<div class="clearfix"></div>
-		<div class="copy">
+			<div class="copy">
 				<ul class="banner-menu-w3layouts">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
@@ -206,36 +206,36 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul> -->
 				<p>© 2018 Vikas Techno School . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+			</div>
 		</div>
 	</div>
-</div>
-<!--//footer -->
-<!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!--//js -->
-<!-- light-case -->
-<script src="js/lightcase.js"></script>
-<script src="js/jquery.events.touch.js"></script>
-<script>
-	$('.showcase').lightcase();
-</script>
-<!-- //light-case -->
-<script src="js/SmoothScroll.min.js"></script>
-<!--Scrolling-top -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	<!--//footer -->
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!--//js -->
+	<!-- light-case -->
+	<script src="js/lightcase.js"></script>
+	<script src="js/jquery.events.touch.js"></script>
+	<script>
+		$('.showcase').lightcase();
+	</script>
+	<!-- //light-case -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!--Scrolling-top -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
 		});
-	});
-</script>
-<!--//Scrolling-top -->
-<!-- smooth scrolling -->
-<script type="text/javascript">
-	$(document).ready(function() {
+	</script>
+	<!--//Scrolling-top -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
 		/*
 			var defaults = {
 			containerID: 'toTop', // fading element id
